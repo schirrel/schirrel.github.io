@@ -1,0 +1,234 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .timeline {
+            list-style: none;
+            padding: 20px 0 20px;
+            position: relative;
+        }
+
+            .timeline:before {
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                content: " ";
+                width: 3px;
+                background-color: #eeeeee;
+                left: 50%;
+                margin-left: -1.5px;
+            }
+
+            .timeline > li {
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+                .timeline > li:before,
+                .timeline > li:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline > li:after {
+                    clear: both;
+                }
+
+                .timeline > li:before,
+                .timeline > li:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline > li:after {
+                    clear: both;
+                }
+
+                .timeline > li > .timeline-panel {
+                    width: 46%;
+                    float: left;
+                    border: 1px solid #d4d4d4;
+                    border-radius: 2px;
+                    padding: 20px;
+                    position: relative;
+                    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+                    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+                }
+
+                    .timeline > li > .timeline-panel:before {
+                        position: absolute;
+                        top: 26px;
+                        right: -15px;
+                        display: inline-block;
+                        border-top: 15px solid transparent;
+                        border-left: 15px solid #ccc;
+                        border-right: 0 solid #ccc;
+                        border-bottom: 15px solid transparent;
+                        content: " ";
+                    }
+
+                    .timeline > li > .timeline-panel:after {
+                        position: absolute;
+                        top: 27px;
+                        right: -14px;
+                        display: inline-block;
+                        border-top: 14px solid transparent;
+                        border-left: 14px solid #fff;
+                        border-right: 0 solid #fff;
+                        border-bottom: 14px solid transparent;
+                        content: " ";
+                    }
+
+                .timeline > li > .timeline-badge {
+                    color: #fff;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.4em;
+                    text-align: center;
+                    position: absolute;
+                    top: 16px;
+                    left: 50%;
+                    margin-left: -25px;
+                    background-color: #999999;
+                    z-index: 100;
+                    border-top-right-radius: 50%;
+                    border-top-left-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                }
+
+                .timeline > li.timeline-inverted > .timeline-panel {
+                    float: right;
+                }
+
+                    .timeline > li.timeline-inverted > .timeline-panel:before {
+                        border-left-width: 0;
+                        border-right-width: 15px;
+                        left: -15px;
+                        right: auto;
+                    }
+
+                    .timeline > li.timeline-inverted > .timeline-panel:after {
+                        border-left-width: 0;
+                        border-right-width: 14px;
+                        left: -14px;
+                        right: auto;
+                    }
+
+        .timeline-badge.primary {
+            background-color: #2e6da4 !important;
+        }
+
+        .timeline-badge.success {
+            background-color: #3f903f !important;
+        }
+
+        .timeline-badge.warning {
+            background-color: #f0ad4e !important;
+        }
+
+        .timeline-badge.danger {
+            background-color: #d9534f !important;
+        }
+
+        .timeline-badge.info {
+            background-color: #5bc0de !important;
+        }
+
+        .timeline-title {
+            margin-top: 0;
+            color: inherit;
+        }
+
+        .timeline-body > p,
+        .timeline-body > ul {
+            margin-bottom: 0;
+        }
+
+            .timeline-body > p + p {
+                margin-top: 5px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 id="timeline">Education</h1>
+        </div>
+        <ul class="timeline">
+            <li class="timeline-inverted">
+                <div class="timeline-badge success">2014</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="nci.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                        <h4 class="timeline-title">BSc Honours in Computing</h4>
+                        <p><small class="text-muted"> National College of Ireland - Dublin </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+                            <p>Coursing year 3 as exchange student.</p>
+
+                            <small> Modules completed: <br />Introduction to Artificial Intelligence, Advanced Internet Technologies, Advanced Programming, Team Project, Wireless Networking, Work Placement.</small>
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-badge success">2011</div>
+                <div class="timeline-panel" align="center">
+
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="ufms.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                        <h4 class="timeline-title">Bachelor of Science (BSc) in Information Systems</h4>
+                        <p><small class="text-muted">Universidade Federal de Mato Grosso do Sul - Brazil </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <p>Undergraduate Degree</p>
+                        <small>
+                            Started my graduation. Since now i've completed 3 year completed with excellence due this i've been rewarded with an one year scholarship in Ireland. One to be done after the exchange.<br />
+                        </small>
+
+                        <p> Modules completed:</p> <blockquote>
+                            <small>Algorithms and programming I, Calculus, Introduction to computation, Discrete mathematics, Algorithms and programming II, Introduction to administration, Introduction to digital systems, Probability and statistics, Operating systems, Computer architecture, Computing and society, Data structures and programming, Computer networks I, Object-oriented programming techniques I, Database I, Organizational behavior, Programming challenges, Entrepreneurship, Software engineering I, Object-oriented programming techniques II, Database II, Engineering and programming for web I, Laboratory of object-oriented systems development, Systems simulation, Analysis and design of object-oriented software I, Artificial intelligence, Scientific methodology and Distributed systems.</small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="timeline-inverted" >
+                <div class="timeline-badge success">2010</div>
+                <div class="timeline-panel" align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="prepara.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                        <h4 class="timeline-title">Web Design</h4>
+ 
+                        <p><small class="text-muted"> Prepara Cusos Profissionalizantes - Brazil </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+                            <p>Professionalizing course of Web Designer.</p>
+
+                            <small> Modules completed: <br />HTML, JavaScript, CSS, Frontpage, Dreamweaver, Flash, Fireworks and PHP</small>
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</body>
+
+</html>
