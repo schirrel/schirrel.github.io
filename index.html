@@ -4,6 +4,8 @@
 <head>
 
 	<title>Jasane</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
 <link rel="shortcut icon" type="image/png" href="icon.png"/>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -14,6 +16,23 @@
 			padding-top: 70px;
 		}
 	</style>
+		<script>
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -98,8 +117,9 @@
      </div>
 </div>
 -->
+<div id="top"></div>
 
-	<a name="education"></a>
+	<a name="education" id="education"></a>
 	<div class="container marketing">
 		<div class="jumbotron" align="center">
 			<h1>Education</h1>
@@ -151,7 +171,7 @@
 			</div>
 		</div>
 		<!-- /END THE FEATURETTES -->
-		<a name="experience"></a>
+		<a name="experience" id="experience"></a>
 		<div class="jumbotron" align="center">
 			<h1>Experience</h1>
 
@@ -182,7 +202,7 @@
 
 
 
-		<a name="skills"></a>
+		<a name="skills" id="skills"></a>
 		<div class="jumbotron" align="center">
 			<h1>Skills</h1>
 
@@ -239,7 +259,7 @@
 
 		<!-- FOOTER -->
 		<footer>
-			<p class="pull-right"><a href="#">Back to top</a>
+			<p class="pull-right"><a href="#top">Back to top</a>
 			</p>
 			<p>&copy; 2015 Jasane Schio. &middot; Brazil &middot; Ireland</p>
 		</footer>
