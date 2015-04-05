@@ -3,32 +3,42 @@ body{
     padding: 0;
     width: 100%;
 }
- 
+
 h1 {
     font-family:"Ubuntu";
     font-weight:normal;
     font-size: 55px;
-   
+
     color: #fff;
     margin: 0;
     padding: 0;
 }
- 
+
 h2 {
    font-family:"Arvo";
    font-weight: normal;
    font-size: 40px;
-   text-align: center;
+   
    color: #fff;
    margin: 0;
     padding: 0;
 }
- 
+
 h3 {
    font-family: Oswald;
    font-weight: normal;
    font-size: 16px;
-   text-align: center;
+
+   margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+h4 {
+   font-family: Oswald;
+   font-weight: normal;
+   font-size: 12px;
+
    margin: 5px 0;
     padding: 0;
     z-index: 1;
@@ -44,7 +54,7 @@ h3 {
     position: fixed;
     margin-top: 30px;
 }
- 
+
 #nav { width: 410px; float: right; margin-top: 7px; }
 #logo a { color: #111; text-decoration: none; float: left; font-size: 30px; margin-left: 20px; margin-top: 0px;color: #fff; font-family:"Wellfleet"; font-weight: bold; }
 #nav ul{
@@ -53,13 +63,13 @@ h3 {
     margin: 0 auto;
     list-style: none;
 }
- 
+
 #nav li{
     margin-top: 1px;
     float: left;
     padding-left: 21px;
 }
- 
+
 #nav li a { color: #fff; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Wellfleet'; }
 #nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
 #nav li a:hover { color: #001100; opacity:1;  }
@@ -70,7 +80,7 @@ h3 {
   text-align: left;
   margin: 50px auto;
 }
- 
+
  .author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }
  .author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; }
  .quotes_container { width: 800px; margin: 0 auto; }
@@ -78,41 +88,44 @@ h3 {
 #divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
 #me, #education{ width: 100%; }
 #me{
-    background:url('../img/1.png') 50% 0 no-repeat fixed;
+    background:url('../img/me.png') 50% 0 no-repeat fixed;
     color: #fff;
     height: 600px;
     margin: 0;
     padding: 200px 0 260px 0;
     background-size: cover;
 }
- 
+
 #education{
 text-align: right;
-    background: url(../img/3.png) 50% 0 no-repeat fixed;
-    height: 200px;
+    background: url(../img/edu.png) 50% 0 no-repeat fixed;
+    height: 800px;
     margin: 0 auto;
-    padding: 250px 0;
+    padding: 100px 0;
     color: #fff;
     background-size: cover;
 }
- 
+
+#text {
+padding: 0 20px 0 0;
+}
 #experience{
-    background: url(../img/2.png) 50% 0 no-repeat fixed;
+    background: url(../img/4.jpg) 50% 0 no-repeat fixed;
     color: #fff;
-    height: 600px;
-    padding: 170px 0 0 0;
+    height: 800px;
+    padding: 100px 0 0 0;
     background-size: cover;
 }
- 
+
 #skills{
-    background: url(../img/4.jpg) 50% 0 no-repeat fixed;
+    background: url(../img/skills3.png) 50% 0 no-repeat fixed;
     height: 200px;
     margin: 0 auto;
     padding: 250px 0;
     color: #fff;
     background-size: cover;
 }
- 
+
 #apps{
     background: url(../img/5.jpg) 50% 0 no-repeat fixed;
     height: 200px;
