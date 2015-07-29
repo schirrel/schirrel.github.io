@@ -12,32 +12,54 @@
     font-style: normal;
 
 }
+.menuBar{
+    width:100%;
+    height:50px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+background-color:#66C2FF;
+    }
+#menu{
+    width:100%;
+    height:50px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+background-color:#331111;
+    }
+#menu ul li { display: inline; }
 html,body{
- font-family: 'BebasRegular';
+ 	font-family: 'BebasRegular';
 	width:100%;
 	height:100%;
 }
 
 .navigation{
+text-align:center;
 	position:fixed;
 	z-index:1;
-	top:20px;
+	top:0px;
+width:100%;
+background-color:#FFFFFF;
 }
 .navigation li{
-	color:#333333;
+	font-size: 20px;
+	color:#66C2FF;
 	display:block;
-	padding: 0 10px;
-	line-height:30px;
+	padding: 10px 0 0 10px;
+	line-height:50px;
 	margin-bottom:2px;
-	font-weight:bold;
+	
 	-webkit-transition: all .2s ease-in-out;
-	border-bottom:1px solid black;
-	text-align:left;
+	
+	text-align:center;
 	width:53px;
 }
 .navigation li:hover,.active{
-	font-size:25px;
-	cursor:pointer;
+	text-align:center;
 	width:100px!important;
 }
 .envatologo{
@@ -55,35 +77,28 @@ z-index:1;
 	height:100%;
 	position: relative;
 }
-.wrapper{
-	width:960px;
-	height:200px;
-	margin:0 auto;
-	position:relative;
-}
-.slideno{
-	position:absolute;
-	bottom:0px;
-	left:0px;
-	font-size:100px;
-	font-weight:bold;
-	color:rgba(255,255,255,0.3);
-}
-.button{
-	display:block;
-	width:50px;
-	height:50px;
-	position:absolute;
-	bottom:0px;
-	left:50%;
-	background-color:#333333;
-	background-image:url(../images/arrow.png);
-}
-.button:hover{
-	background-color:#494949;
-	cursor:pointer;
+
+
+
+a:link {
+color: #019fe9;
+    text-decoration: none;
 }
 
+a:visited {
+color: #019fe9;
+    text-decoration: none;
+}
+
+a:hover {
+color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+color: #019fe9;
+   text-decoration: none;
+}
 /******************************
  SLIDE 1 
 *******************************/
