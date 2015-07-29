@@ -12,6 +12,9 @@
     font-style: normal;
 
 }
+
+body{
+color: #FFFFFF;}
 .menuBar{
     width:100%;
     height:50px;
@@ -71,6 +74,8 @@ margin-top:-41px;
 margin-left:-223px;
 z-index:1;
 }
+
+
 .slide{
 	background-attachment: fixed;
 	width:100%;
@@ -78,8 +83,26 @@ z-index:1;
 	position: relative;
 }
 
+.slide .divFooter{
+position: absolute;
+bottom:10%;
+left:30%;
+color: #FFFFFF;
 
+}
+.serigradEsquerda{ 
+margin-top: 20%;
+float: left; 
+width: 40%;
+margin-left: 30px;
+ }
 
+.serigradDireito{ 
+margin-top: 30%;
+float: right; 
+width: 30%;
+margin-right: 80px;
+ }
 a:link {
 color: #019fe9;
     text-decoration: none;
