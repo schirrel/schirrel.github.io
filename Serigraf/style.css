@@ -67,9 +67,9 @@ background-color:#FFFFFF;
 }
 .envatologo{
 position:fixed;
-top:30%;
-left:60%;
-width:246px;
+top:19%;
+left:71%;
+width:123px;
 margin-top:-41px;
 margin-left:-223px;
 z-index:1;
@@ -161,7 +161,7 @@ background-image:url(b3.png);
 *******************************/
 
 #slide4{
-	background-image:url(b4.png);
+	background-image:url(bg1231.png);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
