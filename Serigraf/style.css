@@ -125,6 +125,21 @@ color: #019fe9;
 /******************************
  SLIDE 1 
 *******************************/
+#slide6{
+	background-image:url(sun.png);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#slide5{
+	background-image:url(atm.png);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 #slide1{
 	background-image:url(b1.png);
 	-webkit-background-size: cover;
