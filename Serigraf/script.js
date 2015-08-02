@@ -19,6 +19,7 @@ $('a[href*=#]:not([href=#])').click(function () {
 
 var num = 50; //number of pixels before modifying styles
 
+
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > num) {
         $('.menu').addClass('fixed');
@@ -56,7 +57,7 @@ $(window).bind('scroll', function () {
         }, 2000, 'easeInOutQuint');
     }
 
-
+	
     //When the user clicks on the button, get the get the data-slide attribute value of the button and pass that variable to the goToByScroll function
     button.click(function (e) {
         e.preventDefault();
