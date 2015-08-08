@@ -1,0 +1,356 @@
+body {
+	background-color: #019fe9;
+	padding-top: 70px;
+}
+.navbar-transp {
+	background-color: transparent;
+}
+#menu {
+	position: fixed;
+	left: 0px;
+	top: 20px;
+	width: 60%;
+	z-index: 3;
+	background-color: #FFFFFF;
+	font-size: 12px;
+}
+#menu li {
+	padding: 5px 0px 0 10px;
+	display: inline-block;
+}
+#menu li a {
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	padding: 8px 8px;
+	outline: none;
+}
+#menu li a:hover {
+	color: #019fe9;
+	/*		border-radius: 12px 12px 12px 12px ;*/
+	/*        background: #06C;*/
+}
+#menu li a:active {
+	color: black;
+	/*        background: #06C;*/
+}
+#carrosel {
+	width: 60%;
+}
+#logo {
+	position: fixed;
+	right: 50px;
+	top: -20x;
+	width: 288px;
+	height: 62px;
+	z-index: 3;
+	background-image: url("../img/logoDireita.png");
+	background-repeat: no-repeat;
+}
+/* PARALLAX SCROLLING EXPERIMENT
+   Master Styles
+   Author: Jonathan Nicol (f6design.com)
+*****************************************************************/
+
+/* Global reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+*****************************************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html {
+	overflow-y: scroll;
+	/* always force a scrollbar in non-IE */
+}
+body {
+	background: #e3e5e5;
+	overflow-x: hidden;
+	height: 5300px;
+	line-height: 1.5;
+	color: #000;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+}
+h1 {
+	color: #21a97e;
+}
+a,
+a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color: #21a97e;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+}
+img {
+	display: block;
+}
+p {
+	margin: 1em 0;
+}
+/* Common shared styles
+*****************************************************************/
+
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+/* Page structure
+*****************************************************************/
+
+#wrapper {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	background: #fff;
+}
+#branding h1 {
+	width: 940px;
+	padding: 10px 15px;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+/* Nav
+*****************************************************************/
+
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 16px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+nav#primary li {
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	padding: 10px;
+}
+nav#primary a {
+	/*	display: block;*/
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	/*	background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;*/
+}
+nav#primary a:hover,
+nav#primary a.active {
+	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+}
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;
+	;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+}
+/* Parallax
+*****************************************************************/
+
+/* content */
+
+#content {
+	z-index: 4;
+	position: fixed;
+	/*max-width: 940px;*/
+	padding: 0 10px;
+	/*margin: 0 auto;*/
+	line-height: 1.7;
+}
+#content article {
+	width: 600px;
+}
+#inicio,
+#noticias,
+#produtos,
+#portfolio {
+	padding-top: 105px;
+}
+#inicio {
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	
+}
+#noticias {
+	position: absolute;
+	left: 1400px;
+/*	background: #FFF000;*/
+}
+#produtos {
+	position: absolute;
+	left: 2800px;
+/*	background: #F00FF0;*/
+}
+#content h1 {
+	margin: 0 0 25px 0;
+	font-size: 60px;
+	font-family: Georgia, serif;
+	font-weight: normal;
+	line-height: 65px;
+}
+#portfolio {
+	position: absolute;
+	left: 4200px;
+/*	background: #FF0F00;*/
+}
+/*
+#historia {
+	position: absolute;
+	left: 5600px;
+	top: 0px;
+	background: #0ffff0;
+}
+*/
+
+/*
+#contato {
+	position: absolute;
+	left: 6000px;
+	top: 0px;
+	background: #0000FF;
+}*/
