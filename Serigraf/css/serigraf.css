@@ -1,6 +1,7 @@
 body {
-	background-color: #019fe9;
+	background-color: #ffffff;
 	padding-top: 70px;
+	background-image: url('../img/possivelbg.png');
 }
 .navbar-transp {
 	background-color: transparent;
@@ -11,7 +12,7 @@ body {
 	top: 20px;
 	width: 60%;
 	z-index: 3;
-	background-color: #FFFFFF;
+	background-color: #000000;
 	font-size: 12px;
 }
 #menu li {
@@ -20,7 +21,7 @@ body {
 }
 #menu li a {
 	text-decoration: none;
-	color: black;
+	color: #ffffff;
 	font-size: 16px;
 	padding: 8px 8px;
 	outline: none;
@@ -37,6 +38,7 @@ body {
 #carrosel {
 	width: 60%;
 }
+/*
 #logo {
 	position: fixed;
 	right: 50px;
@@ -47,6 +49,7 @@ body {
 	background-image: url("../img/logoDireita.png");
 	background-repeat: no-repeat;
 }
+*/
 /* PARALLAX SCROLLING EXPERIMENT
    Master Styles
    Author: Jonathan Nicol (f6design.com)
@@ -189,7 +192,7 @@ html {
 	/* always force a scrollbar in non-IE */
 }
 body {
-	background: #e3e5e5;
+	
 	overflow-x: hidden;
 	height: 5300px;
 	line-height: 1.5;
@@ -236,6 +239,7 @@ hr {
 
 #wrapper {
 	position: relative;
+	
 }
 #branding {
 	width: 100%;
@@ -255,10 +259,12 @@ hr {
 nav#primary {
 	z-index: 5;
 	position: fixed;
-	top: 0;
+	top: 30px;
 	left: 16px;
 	margin-top: 10px;
-	background-color: #FFFFFF;
+	background-color: #000000;
+	font-weight: bold;
+	color: #fff;
 }
 nav#primary li {
 	display: inline-block;
@@ -267,6 +273,7 @@ nav#primary li {
 	padding: 10px;
 }
 nav#primary a {
+	color: #ffffff;
 	/*	display: block;*/
 	width: 20px;
 	height: 20px;
@@ -275,18 +282,38 @@ nav#primary a {
 }
 nav#primary a:hover,
 nav#primary a.active {
-	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+color: #CCCCCC;
+	text-decoration: none;
 }
 nav#primary h1 {
 	position: absolute;
 	right: 22px;
-	top: -7px;
+	top: -15px;
 	display: none;
 	padding: 4px 20px 4px 7px;
 	;
 	color: #fff;
 	white-space: nowrap;
 	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+}
+nav#logo {
+position: fixed;
+left: 50%;
+	top: 5px;
+}
+#inicioContainer {
+	top: 120px;
+height: 400px;
+	width: 900px;
+	position: absolute;
+background-color: #FCCCC0;
+}
+#inicioCarousel {
+height: 100%;
+	width: 40%;
+	left: 80%;
+	position: relative;
+	background-color: #FC10F0;
 }
 /* Parallax
 *****************************************************************/

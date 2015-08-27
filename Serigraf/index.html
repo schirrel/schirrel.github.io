@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -6,13 +6,16 @@
 	<title>Serigraf</title>
 
 	<meta charset="utf-8" />
-	<meta name="description" content="A parallax scrolling experiment using jQuery" />
+	<meta name="description" content="Serigraf - Grafica e Editora" />
 
 	<link rel="stylesheet" media="all" href="css/serigraf.css" />
 
 	<script src="js/modernizr.custom.37797.js"></script>
+	<script src="js/serigraf.js"></script>
 	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<script>
 		!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')
 	</script>
@@ -38,13 +41,20 @@
 				</li>
 
 			</ul>
+
+
+		</nav>
+		<nav id="logo">
+			<img src="img/serigraflogo.png" height="100px" />
 		</nav>
 		<div id="content">
 			<article id="inicio">
-				<header>
-					<h1>Inicio</h1>	
-				</header>
-				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<div id="inicioContainer">
+					<div id="inicioCarousel">
+
+					</div>
+				</div>
 			</article>
 			<article id="noticias">
 				<header>
@@ -64,51 +74,10 @@
 				</header>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</article>
-<!--
-			<article id="historia">
-				<header>
-					<h1>História</h1>	
-				</header>
-				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</article>
--->
-<!--
-			<article id="contato">
-				<header>
-					<h1>Contato/Orçamento</h1>	
-				</header>
-				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</article>
--->
-		</div>
 
-		<!-- Parallax foreground 
-		<div id="parallax-bg3">
-			<img id="bg3-1" src="img/balloon.png" width="529" height="757" alt="Montgolfier hot air balloon" />
-			<img id="bg3-2" src="img/balloon2.png" width="603" height="583" alt="Frameless parachute" />
-			<img id="bg3-3" src="img/balloon3.png" width="446" height="713" alt="Blanchard's air balloon" />
-			<img id="bg3-4" src="img/ground.png" width="1104" height="684" alt="Landscape with trees and cows" />
 		</div>
-
-		<!-- Parallax  midground clouds 
-		<div id="parallax-bg2">
-			<img id="bg2-1" src="img/cloud-lg1.png" alt="cloud" />
-			<img id="bg2-2" src="img/cloud-lg1.png" alt="cloud" />
-			<img id="bg2-3" src="img/cloud-lg1.png" alt="cloud" />
-			<img id="bg2-4" src="img/cloud-lg1.png" alt="cloud" />
-			<img id="bg2-5" src="img/cloud-lg1.png" alt="cloud" />
-		</div>
-
-		<!-- Parallax  background clouds 
-		<div id="parallax-bg1">
-			<img id="bg1-1" src="img/cloud-lg2.png" alt="cloud" />
-			<img id="bg1-2" src="img/cloud-lg2.png" alt="cloud" />
-			<img id="bg1-3" src="img/cloud-lg2.png" alt="cloud" />
-			<img id="bg1-4" src="img/cloud-lg2.png" alt="cloud" />
-		</div>
-
--->
 	</div>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 
 </body>
 
