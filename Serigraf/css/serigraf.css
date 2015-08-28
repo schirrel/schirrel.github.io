@@ -307,13 +307,23 @@ height: 400px;
 	width: 900px;
 	position: absolute;
 background-color: #FCCCC0;
+
 }
 #inicioCarousel {
 height: 100%;
 	width: 40%;
 	left: 80%;
 	position: relative;
-	background-color: #FC10F0;
+	background-color: #000000;
+}
+#myCarousel {
+color: white;
+}
+.item {
+position: relative;
+width: 300px;
+ word-wrap: break-word;         
+    overflow-wrap: break-word;
 }
 /* Parallax
 *****************************************************************/
