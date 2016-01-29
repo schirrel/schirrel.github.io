@@ -1,61 +1,379 @@
 <html>
 <head>
 <title>Jogos</title>
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="icon"  type="image/png"  href="icon.png" />
+    <style>
+        .timeline {
+            list-style: none;
+            padding: 20px 0 20px;
+            position: relative;
+        }
 
-<body>
-<div class="destination">
-	<div class="container">
-		<div class="destination-1">
-			<div class="col-md-3 destination-left">
-				<img src="images/images/carlos140.png" alt="">
-				<div class="tool">
-					<img src="images/arrow.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-3 destination-left destination-middle">
-				<h4>PRIMARY INDUSTRY</h4>
-				<div class="strip one"></div>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
-			</div>
-			<div class="col-md-3 destination-left destination-right">
-				<img src="images/images/paulo140.png" alt="">
-				<div class="tool">
-					<img src="images/arrow.png" alt=""/>
-				</div>
-			</div>	
-			<div class="col-md-3 destination-left destination-middle">
-				<h4>SECONDARY INDUSTRY</h4>
-				<div class="strip one"></div>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
-			</div>
-			<div class="col-md-3 destination-left destination-middle">
-				<h4>TERRITORY INDUSTRY</h4>
-				<div class="strip one"></div>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
-			</div>
-			<div class="col-md-3 destination-left">
-				<img src="images/images/sane140_2.png" alt="">
-				<div class="tool two">
-					<img src="images/arrow.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-3 destination-left destination-middle">
-				<h4>LARGE SCALE INDUSTRY</h4>
-				<div class="strip one"></div>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
-			</div>
-			<div class="col-md-3 destination-left">
-				<img src="images/images/tai140.png" alt="">
-				<div class="tool two">
-					<img src="images/arrow.png" alt=""/>
-				</div>
-			</div>
-			
-			<div class="clearfix"></div>	
-		</div>
+            .timeline:before {
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                content: " ";
+                width: 3px;
+                background-color: #eeeeee;
+                left: 50%;
+                margin-left: -1.5px;
+            }
+
+            .timeline > li {
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+                .timeline > li:before,
+                .timeline > li:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline > li:after {
+                    clear: both;
+                }
+
+                .timeline > li:before,
+                .timeline > li:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline > li:after {
+                    clear: both;
+                }
+
+                .timeline > li > .timeline-panel {
+                    width: 46%;
+                    float: left;
+                    border: 1px solid #d4d4d4;
+                    border-radius: 2px;
+                    padding: 20px;
+                    position: relative;
+                    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+                    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+                }
+
+                    .timeline > li > .timeline-panel:before {
+                        position: absolute;
+                        top: 26px;
+                        right: -15px;
+                        display: inline-block;
+                        border-top: 15px solid transparent;
+                        border-left: 15px solid #ccc;
+                        border-right: 0 solid #ccc;
+                        border-bottom: 15px solid transparent;
+                        content: " ";
+                    }
+
+                    .timeline > li > .timeline-panel:after {
+                        position: absolute;
+                        top: 27px;
+                        right: -14px;
+                        display: inline-block;
+                        border-top: 14px solid transparent;
+                        border-left: 14px solid #fff;
+                        border-right: 0 solid #fff;
+                        border-bottom: 14px solid transparent;
+                        content: " ";
+                    }
+
+                .timeline > li > .timeline-badge {
+                    color: #fff;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.4em;
+                    text-align: center;
+                    position: absolute;
+                    top: 16px;
+                    left: 50%;
+                    margin-left: -25px;
+                    background-color: #999999;
+                    z-index: 100;
+                    border-top-right-radius: 50%;
+                    border-top-left-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                }
+
+                .timeline > li.timeline-inverted > .timeline-panel {
+                    float: right;
+                }
+
+                    .timeline > li.timeline-inverted > .timeline-panel:before {
+                        border-left-width: 0;
+                        border-right-width: 15px;
+                        left: -15px;
+                        right: auto;
+                    }
+
+                    .timeline > li.timeline-inverted > .timeline-panel:after {
+                        border-left-width: 0;
+                        border-right-width: 14px;
+                        left: -14px;
+                        right: auto;
+                    }
+
+        .timeline-badge.primary {
+            background-color: #2e6da4 !important;
+        }
+
+        .timeline-badge.success {
+            background-color: #3f903f !important;
+        }
+
+        .timeline-badge.warning {
+            background-color: #f0ad4e !important;
+        }
+
+        .timeline-badge.danger {
+            background-color: #d9534f !important;
+        }
+
+        .timeline-badge.info {
+            background-color: #5bc0de !important;
+        }
+
+        .timeline-title {
+            margin-top: 0;
+            color: inherit;
+        }
+
+        .timeline-body > p,
+        .timeline-body > ul {
+            margin-bottom: 0;
+        }
+
+            .timeline-body > p + p {
+                margin-top: 5px;
+            }
+    </style>
+<script language=”javascript” type=”text/javascript”>
+function redirectionar(){
+window.location.href=window.location.href+"cv/";}
+</script>
+
+</head>
+<body onload="redirectionar()">
+    
+	<br /><br />
+    <div class="container marketing">
+        <div class="page-header">
+            <h1 id="timeline">Jogos feitos com Unity3D</h1>
+        </div>
+        <ul class="timeline">
+
+                <li class="timeline-inverted">
+                <div class="timeline-badge default">10</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">Schirrel</h4> 
+                        <p><small class="text-muted"></small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small>3D Runner. Além de logica do jogo e programação, esse foi o primeiro jogo em que também fiz os modelos 3D. <br />
+Jogo disponivel <a href="../schirrel/v2/">here</a>  aqui. </small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+        <li>
+
+  <li>
+
+        <li class="timeline-inverted">
+                <div class="timeline-badge default">9</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">Grange</h4> 
+                        <p><small class="text-muted"></small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> 2D Top Down Shooter. Alem de logica de jogo e de seu desenvolvimento também fiz 99% dos graficos do jogo. <br />
+Jogo Disponivel <a href="../Grange/">here</a> aqui </small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+        <li>
+
+  <li>
+                <div class="timeline-badge default">8</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">The Resistance</h4> 
+                        <p><small class="text-muted"></small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> A version of the Board game The Resistance. <br />* Multiplayer <br /><a href="../resistance/" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+        <li class="timeline-inverted">
+                <div class="timeline-badge default">7</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">King of Defiant</h4> 
+                        <p><small class="text-muted">20/02/2015 - 03/03/2015</small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> A virtual version of the board game King Of Tokyo. This is the furthest i've been in a game in means of finalization. This game has multiplayer turn based game using network. This is my first work ever using network and dealing with its problems and solving it. I've also had more experience with 3D modeling in this project. There's no Artificial Intelligence due the opponent being all humans, there's no possibility with multiplayer against computer.<br />
+* Multiplayer <br />
+The game is available <a href="jasane.github.io/king/">here</a> to play </small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+        <li>
+                <div class="timeline-badge default">6</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">Monopoly</h4> 
+                        <p><small class="text-muted">13/02/2015 - 20/02/2015</small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small>A version of the classic Monopoly, not completed finished.Due the date buy and pay rent/tax fully working and 90% of the chances and community chest actions working. Player movement and roll the dices. Missing: Build houses and hotels, display players properties, goes to next {railroad adn utility}, collect and repair, more than 2 players game. Requested by the company.<br /><a href="https://e31a8c3302478e35262ac849b16492d40f647a4b.googledrive.com/host/0B6msurscmUR9RlJJbFAtejUtRVE/6.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+        <li class="timeline-inverted">
+                <div class="timeline-badge default">5</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">Space Invaders Version</h4> 
+                        <p><small class="text-muted">06/02/2015 - 13/02/2015</small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small>A version of the classic Space Invaders, with 3 levels, boss, 1 or 2 players, highscore, powerups and effects . Request by the company.<br /><a href="https://b1db60368317634059dc858b7177b712fd62b62e.googledrive.com/host/0B6msurscmUR9d1BZOVpOYnROR0k/Build.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+
+        <li>
+                <div class="timeline-badge default">4</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                      <h4 class="timeline-title">Memory Cards Game</h4> 
+                        <p><small class="text-muted">29/01/2015 - 06/02/2015 </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> Memory game with normal deck cards. Multiplayer, Singleplayer and Versus Computer.With 3 board sizes and computer with 3 difficulty levels.<br /><a href="https://cac2907d382efc556a3fd1e7a4224b39efb2fab5.googledrive.com/host/0B6msurscmUR9ZW1EZllrdXpUbFU/4.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge default">3</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                       <!-- <h4 class="timeline-title">Ttitle</h4> -->
+                        <p><small class="text-muted"> Done in less than 1 day. 28/01/2015 </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> Sphere robots run through the space to reach you, and they die when you click it. This idea was form myself to learn new things, not request by the company.<br /><a href="https://b4ae80c8abb3af5bcb24e0a6a3a51861b6887b46.googledrive.com/host/0B6msurscmUR9MW82VnJTZ3hQWXM/3.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-badge default">2</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+
+                        <p><small class="text-muted"> Done in less than 1 day. 27/01/2015 </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+<small> A simple project where the cube will run to where you click. Requested by Defiant Games.<br /><a href="https://1f56bdc726112a8d13203bf51ee6e0db0c56b281.googledrive.com/host/0B6msurscmUR9WUJVTFJ6b25xYVU/2.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="timeline-inverted" >
+                                <div class="timeline-badge default">1</div>
+                <div class="timeline-panel " align="center">
+                    <div class="timeline-heading">
+                        <img class="img-circle" src="imgs/unity.png" alt="Unity3D Logo" style="width: 140px; height: 140px;">
+
+                      <!-- <h4 class="timeline-title">Ttitle</h4> -->
+                        <p><small class="text-muted"> Done in less than 1 day. 27/01/2015 </small></p>
+                    </div>
+                    <div class="timeline-body">
+
+                        <blockquote>
+                            
+<small> A simple project where the cube will run when you click it.  Requested by Defiant Games.<br /><a href="https://d730d19d6671a6ff2d23cd35b8cf517eea193395.googledrive.com/host/0B6msurscmUR9cmZHTUkxX19kX2s/1.html" >See it on Unity Player</a></small>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+
+<!-- FOOTER -->
+		<footer>
+			<p>&copy; 2015 Jasane Schio</p>
+		</footer>
+
 	</div>
-</div>
 </body>
 
 </html>
