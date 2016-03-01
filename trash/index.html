@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Jasane</title>
+	<link rel="icon"  type="image/png"  href="icon.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			padding-top: 70px;
+		}
+	</style>
+		<script>
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 2000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+<script language=”javascript” type=”text/javascript”>
+function redirecionar(){
+window.location.href=window.location.href+"cv/";}
+</script>
+
+</head>
+<!--<body onload="window.location.href='http://jasane.github.io/cv/';">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display 
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html#me">Jasane</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling 
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#education">Education</a>
+					</li>
+					<li><a href="#experience">Experience</a>
+					</li>
+					<li><a href="#skills">Skills</a>
+					</li>
+					<!--<li><a href="apps.html">Apps</a>
+					</li> 
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a class="navbar-brand" href="https://bitbucket.org/jasane">
+							<img alt="Bitbucket" src="imgs/bucket.ico">
+						</a>
+					</li>
+					<li>
+						<a class="navbar-brand" href="https://github.com/jasane">
+							<img alt="Github" src="imgs/hub.ico">
+						</a>
+					</li>
+					<li>
+						<a class="navbar-brand" href="https://www.linkedin.com/in/jasaneschio">
+							<img alt="Linkedin" src="imgs/link.ico">
+						</a>
+					</li>
+<li>
+						<a class="navbar-brand" href="https://www.defiantgames.com">
+							<img alt="Defiant Games" src="imgs/defiantIco.png">
+						</a>
+					</li>
+					<li>
+						<a class="navbar-brand" href="mailto:jasaneschio@gmail.com">
+							<img alt="Email" src="imgs/mail.ico">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse 
+		</div>
+		<!-- /.container-fluid 
+	</nav>
+
+
+
+<!--
+	<a name="me"></a>
+	<div class="container marketing">
+		<div class="jumbotron" align="center">
+			<h1>About me</h1>
+		</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body" align="center">
+  <blockquote>
+   21 years old brazilian girl livin' in Ireland. <br />
+   Dev addicted!<br />
+   I love programming, editing and everything around development.<br />
+   I have (at least a brief) Knowledge in Web, Mobile, Desktop and Game Development, front and back end. <br />
+   Gimme your code and i'll tell where is missing semicolon or a close brackets. 
+   </blockquote>
+     </div>
+</div>
+
+<div id="top"></div>
+		
+	
+
+	<a name="education" id="education"></a>
+	<div class="container marketing">
+		 <div class="page-header">
+            <h1 id="timeline">Education</h1>
+        </div>
+		<div class="row">
+
+			<div class="col-md-4" align="center">
+				<img class="img-circle" src="imgs/prepara.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				<h2>Prepara <small>2010</small></h2>
+				<h2><small>Prepara Cursos Profissionalizantes - Brazil
+				 </small></h2>
+				<p>Professionalizing course of Web Designer.</p>
+				<blockquote>
+					<p>Modules completed</p>
+					<small>HTML, JavaScript, CSS, Frontpage, Dreamweaver, Flash, Fireworks and PHP</small>
+				</blockquote>
+				<p><a class="btn btn-default" href="http://www.prepara.com.br/" role="button">Prepara</a>
+				</p>
+			</div>
+
+
+			<div class="col-md-4" align="center">
+				<img class="img-circle" src="imgs/ufms.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				<h2>UFMS <small>2011-2016</small></h2>
+				<h2><small>Universidade 	Federal de Mato Grosso do Sul - Brazil
+				 </small></h2>
+				<p>Coursing Information Systems. Three years completed with excellence. One to be done after the exchange.</p>
+				<blockquote>
+					<p>Modules completed</p>
+					<small>Algorithms and programming I, Calculus, Introduction to computation, 	Discrete mathematics, Algorithms and programming II, Introduction to 	administration, Introduction to digital systems, Probability and statistics, 	Operating systems, Computer architecture, Computing and society, Data 	structures and programming, Computer networks I, Object-oriented 	programming techniques I, Database I, Organizational behavior, Programming 	challenges, Entrepreneurship, Software engineering I, Object-oriented 	programming techniques II, Database II, Engineering and programming for 	web I, Laboratory of object-oriented systems development, Systems 	simulation, Analysis and design of object-oriented software I, Artificial 	intelligence, Scientific methodology and Distributed systems.</small>
+				</blockquote>
+				<p><a class="btn btn-default" href="http://ufms.br/" role="button">UFMS</a>
+				</p>
+			</div>
+
+			<div class="col-md-4" align="center">
+				<img class="img-circle" src="imgs/nci.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				<h2>NCI <small>2014-2015</small></h2>
+				<h2><small>National College of Ireland - Ireland
+				 </small></h2>
+				<p>Coursing year 3 as exchange student.</p>
+				<blockquote>
+					<p>Modules completed</p>
+					<small>Introduction to Artificial Intelligence, Advanced Internet Technologies, Advanced Programming, Team Project, Wireless Networking, Work Placement</small>
+				</blockquote>
+				<p><a class="btn btn-default" href="https://www.ncirl.ie/" role="button">NCI</a>
+				</p>
+			</div>
+		</div>
+		<!-- /END THE FEATURETTES 
+		<a name="experience" id="experience"></a>
+	 <div class="page-header">
+            <h1 id="timeline">Experience</h1>
+        </div>
+
+		<center>
+			<div class="row">
+				<div class="col-md-4" align="center"></div>
+				<div class="col-md-4" align="center">
+					<img class="img-circle" src="imgs/defiant.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+					<h2>Defiant Games <small>2015</small></h2>
+					<p>Trainee Game Programmer - Dublin - Ireland</p>
+					<blockquote>
+						<p>Position</p>
+						<small>Leaning how to work with Unity3D Engine, improving C# and logic skills s well as practicing A.I. on Games.</small>
+					</blockquote>
+<p>See <a href= "progress.html">here </a> my progress in Unity3D during the internship. </p><br />
+					<p><a class="btn btn-default" href="http://defiantgames.com/" role="button">Defiant Games</a>
+					</p>
+				</div>
+				<div class="col-md-4" align="center"></div>
+			</div>
+
+
+		</center>
+
+
+
+
+
+		<a name="skills" id="skills"></a>
+		 <div class="page-header">
+            <h1 id="timeline">Skills</h1>
+        </div>
+   <div class="page-header">
+   <div class="row">
+				<div class="col-md-4" align="center">	
+<dl>
+<dt>Development</dt>
+<dd>Java</dd>
+<dd>Swing</dd>
+<dd>C</dd>
+<dd>C#</dd>
+</dl>
+</div>
+<div class="col-md-4" align="center">	<dl>
+<dt>Graphic Desing and Modeling</dt>
+<dd>GIMP</dd>
+<dd>Inkscape</dd>
+<dd>Blender</dd>
+<dd>Photoshop</dd>
+</dl>
+</div>
+
+<div class="col-md-4" align="center">	<dl>
+<dt>Web Development</dt>
+<dd>PHP</dd>
+<dd>Asp.Net</dd>
+<dd>JavaScripts</dd>
+<dd>HMTL</dd>
+<dd>CSS</dd>
+<dd>BootStrap</dd>
+</dl>
+</div>
+
+<div class="col-md-4" align="center">	<dl>
+<dt>Game Development</dt>
+<dd>Unity3D</dd>
+<dd>Cocos2sd-android</dd>
+</dl>
+</div>
+
+
+<div class="col-md-4" align="center">	<dl>
+<dt>Mobile Development</dt>
+<dd>Android Native</dd>
+<dd>Ionic Framework</dd>
+<dd>AngularJS</dd>
+</dl>
+</div>
+
+<div class="col-md-4" align="center">	<dl>
+<dt>Querys</dt>
+<dd>LINQ</dd>
+<dd>SQL</dd>
+<dd>MySql</dd>
+</dl>
+</div>
+</div>
+
+
+
+		<!-- FOOTER 
+		<footer>
+			<p class="pull-right"><a href="#top">Back to top</a>
+			</p>
+			<p>&copy; 2015 Jasane Schio. &middot; Brazil &middot; Ireland</p>
+		</footer>
+
+	</div>
+	<!-- /.container -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
