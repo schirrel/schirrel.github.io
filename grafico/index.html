@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+Gráfico de Disciplinas De Materias Do Ensino Superior</title>
+    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
+
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+    <link href="docs/assets/css/demo.css" rel="stylesheet">
+           <script src="js/d3.js"></script>
+      <script src="main.js" ></script>
+ 
+<!--    <link rel="shortcut icon" href="img/favicon.ico">-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+          <style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+  </head>
+  <body onload="Load()">
+                <nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="#">Gráfico de Disciplinas</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#fakelink">About Us</a></li>
+               </ul>
+
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
+    <div id="filtros" class="container">
+ <div class="jumbotron">
+     <div id="fInit">
+      <h1 class="demo-section-title">Filters</h1>
+
+      <div class="row">
+          
+       <div class="col-xs-3">
+            <h3 class="demo-panel-title">Courses</h3>
+            <div class="row">
+            <div class="col-xs-4" >
+            
+    <a href="#show" onclick ="AddCourse()" class="btn btn-block btn-lg btn-primary" style="padding-left:10px"><span class="fui-plus"></span> </a> 
+         </div>
+            <div class="col-xs-5">
+                           <select id="CourseSelect" class="form-control select select-primary" data-toggle="select">
+
+            <option value="0" selected>Choose Course</option>
+         <!--   <option value="1">Spider Man</option>
+            <option value="2">Wolverine</option>
+            <option value="3">Captain America</option>
+            <option value="4" >X-Men</option>
+            <option value="5">Crocodile</option>
+-->
+          </select>
+                </div>
+               
+
+<br /> 
+           </div>
+         </div>
+          <div class="col-xs-3"> </div>
+        <div class="col-xs-6">
+          <h3 class="demo-panel-title">Selected Courses</h3>
+          <div class="tagsinput-primary">
+            <input id="TagsCourses" name="tagsinput" class="tagsinput" data-role="tagsinput" value="" editable="false"/>
+          </div>
+        </div> <!-- /.col-xs-6 -->
+      </div> <!-- /.row -->
+
+      <div class="row">
+        <div class="col-xs-3">
+          <h3 class="demo-panel-title">University</h3>
+          <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" data-toggle="radio" checked="">
+            All
+          </label>
+          <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1" data-toggle="radio" >
+           Private
+          </label>
+            <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1" data-toggle="radio" >
+           Public
+          </label>
+        </div> <!-- /radios col-xs-3 -->
+
+        </div>
+<a href="#show" onclick ="ShowChart()" class="btn btn-block btn-lg btn-primary">Show Chart</a>
+ </div>
+     <div id="fNovo" style="display:none">    <a href="#new" onclick ="NewChart()" class="btn btn-block btn-lg btn-primary">New Chart</a> </div>
+        
+        </div> <!-- /container -->
+</div>
+ 
+ 
+      
+      
+         <div class="container">
+          <div class="row">
+              <div class="col-xs-6">
+          <div class="container" id="grafico" name="grafico" align="left"> </div>
+              </div>
+              <div class="col-xs-3">
+                  
+              </div>
+              <div id="legenda" style="display:none" class="col-xs-3">
+                  
+                 <h5>Legend</h5>
+                  <div id="leg" name="leg"></div>
+                  
+              </div>
+          </div>
+  
+          
+      </div>
+<!--
+         <div class="container">
+          <div class="row">
+              <div class="col-xs-6">
+          <div class="container" id="grafico" name="grafico" align="left"> </div>
+              </div>
+              <div class="col-xs-3">
+                  
+              </div>
+      
+          </div>
+  
+                  <div id="legenda" style="display:none" class="col-xs-3">
+                  
+                 <h5>Legend</h5>
+                  <div id="leg" name="leg"></div>
+                  
+              </div>
+      </div>
+-->
+
+    <script src="dist/js/vendor/jquery.min.js"></script>
+    <script src="dist/js/vendor/video.js"></script>
+    <script src="dist/js/flat-ui.min.js"></script>
+    <script src="docs/assets/js/application.js"></script>
+
+    <script>
+      videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+    </script>
+  </body>
+</html>
