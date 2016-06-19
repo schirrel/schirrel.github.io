@@ -97,8 +97,6 @@ function containsCurso(a, obj) {
 
 function Chart() {
     if(selecionadas.length > 0){
-      
-   
     document.getElementById("vis").innerHTML = "";
     var vis = d3.select("#vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
     var line = d3.svg.line().x(function(d, i) {
@@ -183,9 +181,9 @@ function Chart() {
 
         $("#blurb-content").html(blurb);
     }
-    } else {
+    }else {
         ChartInit();
-    }
+   }
 }
 
 function MakeTable(){
@@ -328,12 +326,15 @@ function Load() {
 function MakeCheck(){
     
     var container = document.getElementById("CourseChecks");
-   for(var j = 0; j < selecionadas.length/2; j++){
+   for(var j = 1; j < selecionadas.length/2; j++){
+       
             var checkbox = document.createElement('input');
 checkbox.type = "checkbox";
 checkbox.name = "courseCheck";
 checkbox.value = selecionadas[j][0];
 checkbox.id = "courseCheck";
+checkbox.style.marginLeft = "10px";
+       checkbox.style.marginRight = "10px";
 checkbox.onclick = function() {
      Check();
 }
@@ -343,6 +344,7 @@ label.appendChild(document.createTextNode(selecionadas[j][0]));
 
 container.appendChild(checkbox);
 container.appendChild(label);
+       if(j> 0 && j%2==0) 
        container.appendChild(document.createElement("br")); 
     };
 

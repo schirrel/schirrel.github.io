@@ -71,6 +71,26 @@ a {
     background: #c3608f;
     color: #fff;
 }
+input[type=checkbox] {
+      /* All browsers except webkit*/
+      transform: scale(1);
+/*//float: left;*/
+      /* Webkit browsers*/
+      -webkit-transform: scale(1);
+    }
+
+#clicks a {
+    color: #000;
+    font-size: 12px;
+    padding: 5px;
+    background: #e2e2e2;
+    cursor: pointer;
+    margin-right: 3px;
+}
+#clicks a:last-child {
+    margin-right: 0;
+}
+
 #vis {
   
     min-height: 550px;
