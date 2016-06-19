@@ -61,8 +61,11 @@ var e = document.getElementById("CourseSelect");
        // console.log(selecionadas)
         findMinMax(selecionadas);
        // console.log(MIN+" "+MAX)
-        y = d3.scale.linear().domain([MAX, MIN ]).range([0 , h - 30]);
+       // y = d3.scale.linear().domain([MAX, MIN]).range([margin , h -20]);
+       // x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
+         y = d3.scale.linear().domain([MAX, MIN- (MAX * .1)]).range([ 0, h ]);
         x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
+        Chart();
         Chart(); 
 
     });
