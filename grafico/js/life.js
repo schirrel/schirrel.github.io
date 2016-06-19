@@ -2,7 +2,7 @@ var regions = {
         "PUB": "Public",
         "PRIV": "Private"
     },
-    w = 1100,
+    w = 900,
     h = 550 ,
     margin = 80,
     startYear = 2009,
@@ -19,6 +19,37 @@ var countries_regions = {};
 var startEnd = {},
     countryCodes = {};
 
+function OnChange(){
+    var e = document.getElementById("CourseSelect");
+        var selected = e.options[e.selectedIndex].text;
+    if(selected!="Choose Couse"){
+        
+          selecionadas = [];
+        
+    d3.text('linha.csv', 'text/csv', function(text) {
+        var materias = d3.csv.parseRows(text);
+         var s = ["Educação", "Direito", "Arquitetura"];
+       
+var e = document.getElementById("CourseSelect");
+        var selected = e.options[e.selectedIndex].text;
+        
+    materias.forEach(function(m) {
+        //console.log(m);
+            if (m[0] == selected)
+                selecionadas.push(m);
+        });
+        console.log(selecionadas)
+        findMinMax(selecionadas);
+        y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h - 10]);
+        x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
+        Chart();
+
+    })
+        
+        
+    }
+        
+}
 
 function containsCurso(a, obj) {
 
@@ -257,13 +288,18 @@ for(var i = 1; i < materias.length/2;i++){
    
     });
     
-    
+    ChartInit();
 }
 
 function ShowChart() {
-    selecionadas = [];
-        
-    d3.text('linha.csv', 'text/csv', function(text) {
+  
+}
+
+
+
+
+function ChartInit(){
+        d3.text('linha.csv', 'text/csv', function(text) {
         var materias = d3.csv.parseRows(text);
          var s = ["Educação", "Direito", "Arquitetura"];
        
@@ -271,11 +307,9 @@ var e = document.getElementById("CourseSelect");
         var selected = e.options[e.selectedIndex].text;
         
     materias.forEach(function(m) {
-        //console.log(m);
-            if (m[0] == selected)
                 selecionadas.push(m);
         });
-        console.log(selecionadas)
+       
         findMinMax(selecionadas);
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h - 10]);
         x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);

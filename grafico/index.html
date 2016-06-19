@@ -1,67 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-     <meta charset="utf-8"/>
-<title>Courses</title>
-<link rel="stylesheet" type="text/css" href="css/life.css"/>
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="js/d3.js"></script>
-<script type="text/javascript" src="js/d3.time.js"></script>
-<script type="text/javascript" src="js/d3.csv.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Bevan|Cardo' rel='stylesheet' type='text/css'>
-    <!-- Loading Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/flat-ui.css" rel="stylesheet">
-     <link href="css/demo.css" rel="stylesheet">
-     
-</head>
-<body onload="Load()">
-<div id="main-wrapper">
-<div id="content" style="width:100%;padding-left:5px; margin-left:5px; margin-right:5px ">
-    <h1>Course Chart</h1>
- 
-   <div class="row" style="padding-left:5px; margin-left:5px; margin-right:10px ">
-            <div class="col-xs-9"> <div id="blurb">
-<div id="blurb-content"></div>
-</div>
-                <div id="vis"></div>
-              </div>
-              <div class="col-xs-3" >
+   <head>
+      <meta charset="utf-8"/>
+      <title>Courses</title>
+      <link rel="stylesheet" type="text/css" href="css/life.css"/>
+      <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+      <script type="text/javascript" src="js/d3.js"></script>
+      <script type="text/javascript" src="js/d3.time.js"></script>
+      <script type="text/javascript" src="js/d3.csv.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Bevan|Cardo' rel='stylesheet' type='text/css'>
+      <!-- Loading Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/flat-ui.css" rel="stylesheet">
+      <link href="css/demo.css" rel="stylesheet">
+   </head>
+   <body onload="Load()">
+      <div id="main-wrapper">
+         <div id="content" style="width:100%;padding-left:5px; margin-left:5px; margin-right:5px ">
+            <h1>Course Chart</h1>
+            <div class="row" style="padding-left:5px; margin-left:5px; margin-right:10px ">
+               <div class="col-xs-9">
+                  <div id="blurb">
+                     <div id="blurb-content"> <br/></div>
+                  </div>
+                  <div id="vis"></div>
+               </div>
+               <div class="col-xs-3" >
                   Filters
                   <div style="border-bottom: 1px solid #e2e2e2;font-size:14px">University</div>
                   <div id="filters" style="margin-top:5px">
-                      
-<a id="PUB">Public</a>
-<a id="PRIV">Private</a>
-</div>
-   <div style="border-bottom: 1px solid #e2e2e2;font-size:14px; margin-bottom:5px">Course</div> 
-                  <button onclick="AddCourse()">+</button>
-              <select id ="CourseSelect">
-  <option value="0">Choose Couse</option>
-
-</select>   
+                     <a id="PUB">Public</a>
+                     <a id="PRIV">Private</a>
+                  </div>
+                  <div style="border-bottom: 1px solid #e2e2e2;font-size:14px; margin-bottom:5px">Course</div>
+                  <select id ="CourseSelect" onchange="OnChange()">
+                     <option value="0">Choose Couse</option>
+                  </select>
                   <br />  <br />
-      <button onclick="ShowChart()">Show Chart</button>            
-   
-    
-
-              </div>
-        </div>
-
-
-
-</div> 
-</div> 
-<script type="text/javascript" src="js/life.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#filters a').click(function() {
-        var countryId = $(this).attr("id");
-        $(this).toggleClass(countryId);
-        showRegion(countryId);
-    });
-    
-});
-</script>
-</body>
+                  <!--      <button onclick="ShowChart()">Show Chart</button>            -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript" src="js/life.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $('#filters a').click(function() {
+                 var countryId = $(this).attr("id");
+                 $(this).toggleClass(countryId);
+                 showRegion(countryId);
+             });
+             
+         });
+      </script>
+   </body>
 </html>
