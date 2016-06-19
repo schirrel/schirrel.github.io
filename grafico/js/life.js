@@ -324,8 +324,14 @@ function Load() {
 }
 
 function MakeCheck(){
-    
+
     var container = document.getElementById("CourseChecks");
+    
+while (container.firstChild) {
+    container.removeChild(container.firstChild);
+}
+    
+    
    for(var j = 1; j < selecionadas.length/2; j++){
        
             var checkbox = document.createElement('input');
@@ -402,11 +408,12 @@ console.log($("#CourseSelect").selected);
         materias.forEach(function(m) {
             selecionadas.push(m);
         });
-  MakeCheck();
+  
         findMinMax(selecionadas);
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w - 10]);
         Chart();
-
+MakeCheck();
     })
+    
 }
