@@ -37,6 +37,9 @@ function findMinMax(list) {
     });
 }
 
+
+
+
 function OnChange() {
     $('#filters a').toggleClass("PUB", false);
     $('#filters a').toggleClass("PRIV", false);
@@ -90,17 +93,6 @@ function containsCurso(a, obj) {
     return null;
 }
 
-
-function containsCursoNome(a, obj) {
-
-    for (var i = 0; i < a.length; i++) {
-
-        if (a[0] === obj) {
-            return a[i];
-        }
-    }
-    return null;
-}
 
 
 function Chart() {
@@ -325,20 +317,85 @@ function Load() {
     });
 
     ChartInit();
+  
 }
 
+function MakeCheck(){
+    
+    var container = document.getElementById("CourseChecks");
+   for(var j = 0; j < selecionadas.length/2; j++){
+            var checkbox = document.createElement('input');
+checkbox.type = "checkbox";
+checkbox.name = "courseCheck";
+checkbox.value = selecionadas[j][0];
+checkbox.id = "courseCheck";
+checkbox.onclick = function() {
+     Check();
+}
+var label = document.createElement('label')
+label.htmlFor = "id";
+label.appendChild(document.createTextNode(selecionadas[j][0]));
+
+container.appendChild(checkbox);
+container.appendChild(label);
+       container.appendChild(document.createElement("br")); 
+    };
+
+}
+function Check(){
+    var checkeds = [];
+$("input:checkbox[name=courseCheck]:checked").each(function(){
+    checkeds.push($(this).val());
+});
+    
+ 
+       $('#filters a').toggleClass("PUB", false);
+    $('#filters a').toggleClass("PRIV", false);
+    MIN = Number.MAX_VALUE,
+        MAX = 0;
+    selecionadas = [];
+
+    d3.text('linha.csv', 'text/csv', function(text) {
+        var materias = d3.csv.parseRows(text);
+
+        checkeds.forEach(function(c) {
+//           aux = containsCurso(materias, m);
+//            console.log(aux);
+//            if (aux!=null){
+//
+//                selecionadas.push(aux); }
+             materias.forEach(function(m) {
+            //console.log(m);
+            if (m[0] == c)
+                selecionadas.push(m);
+        });
+        });
+       console.log(selecionadas);
+        findMinMax(selecionadas);
+        // console.log(MIN+" "+MAX)
+        // y = d3.scale.linear().domain([MAX, MIN]).range([margin , h -20]);
+        // x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
+        y = d3.scale.linear().domain([MAX, MIN - (MAX * .1)]).range([0, h]);
+        x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w - 90]);
+        Chart();
+
+
+    });
+    
+    
+}
 function ChartInit() {
     d3.text('linha.csv', 'text/csv', function(text) {
         var materias = d3.csv.parseRows(text);
        
 console.log($("#CourseSelect").selected);
-        var e = document.getElementById("CourseSelect");
-        var selected = e.options[e.selectedIndex].text;
+        //var e = document.getElementById("CourseSelect");
+       //var selected = e.options[e.selectedIndex].text;
 
         materias.forEach(function(m) {
             selecionadas.push(m);
         });
-
+  MakeCheck();
         findMinMax(selecionadas);
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w - 10]);

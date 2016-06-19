@@ -77,7 +77,7 @@ a {
 }
 #blurb {
    →ĸ height: 60px;
-    border-top: 1px solid #e2e2e2;
+    border-top: 1px solid #000;
 /*   // padding-top: 20px;*/
 }
 path {
@@ -122,7 +122,7 @@ text {
     padding-bottom: 20px;
 }
 #cite a {
-    background: #e2e2e2;
+   // background: #000;
     text-decoration: none;
     color: #821122;
 }
