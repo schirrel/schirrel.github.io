@@ -96,6 +96,9 @@ function containsCurso(a, obj) {
 
 
 function Chart() {
+    if(selecionadas.length > 0){
+      
+   
     document.getElementById("vis").innerHTML = "";
     var vis = d3.select("#vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
     var line = d3.svg.line().x(function(d, i) {
@@ -180,7 +183,9 @@ function Chart() {
 
         $("#blurb-content").html(blurb);
     }
-
+    } else {
+        ChartInit();
+    }
 }
 
 function MakeTable(){
