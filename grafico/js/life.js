@@ -38,11 +38,13 @@ function findMinMax(list) {
 }
 
 function OnChange(){
+    $('#filters a').toggleClass( "PUB", false );
+     $('#filters a').toggleClass("PRIV", false);
     MIN = Number.MAX_VALUE,
     MAX = 0;
     var e = document.getElementById("CourseSelect");
         var selected = e.options[e.selectedIndex].text;
-    if(selected!="Choose Couse"){
+  //  if(selected!="Choose Couse"){
         
           selecionadas = [];
         
@@ -73,7 +75,7 @@ var e = document.getElementById("CourseSelect");
    
         
         
-    }
+   // }
         
 }
 
@@ -273,6 +275,7 @@ function onmouseout(d, i) {
 
 function showRegion(regionCode) {
     var countries = d3.selectAll("path." + regionCode);
+  
     if (countries.classed('highlight')) {
         countries.attr("class", regionCode);
     } else {
