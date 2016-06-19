@@ -19,7 +19,27 @@ var countries_regions = {};
 var startEnd = {},
     countryCodes = {};
 
+function findMinMax(list) {
+    list.forEach(function(l) {
+        for (var i = 1; i < 6; i++) {
+           
+            if (Number(l[i]) < MIN) {
+                MIN = Number(l[i]);
+            }
+            if (Number(l[i]) > MAX) {
+                MAX = Number(l[i]);
+            }
+
+        }
+        
+        
+
+    });
+}
+
 function OnChange(){
+    MIN = Number.MAX_VALUE,
+    MAX = 0;
     var e = document.getElementById("CourseSelect");
         var selected = e.options[e.selectedIndex].text;
     if(selected!="Choose Couse"){
@@ -38,13 +58,16 @@ var e = document.getElementById("CourseSelect");
             if (m[0] == selected)
                 selecionadas.push(m);
         });
-        console.log(selecionadas)
+       // console.log(selecionadas)
         findMinMax(selecionadas);
-        y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h - 10]);
+       // console.log(MIN+" "+MAX)
+        y = d3.scale.linear().domain([MAX, MIN ]).range([0 , h - 30]);
         x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
-        Chart();
+        Chart(); 
 
-    })
+    });
+    
+   
         
         
     }
@@ -62,20 +85,6 @@ function containsCurso(a, obj) {
     return null;
 }
 
-function findMinMax(list) {
-    list.forEach(function(l) {
-        for (var i = 1; i < 6; i++) {
-            if (Number(l[i]) < MIN) {
-                MIN = Number(l[i]);
-            }
-            if (Number(l[i]) > MAX) {
-                MAX = Number(l[i]);
-            }
-
-        }
-
-    });
-}
 
 function containsCursoNome(a, obj) {
 
@@ -122,7 +131,7 @@ var line = d3.svg.line().x(function(d, i) {
                     }
                 }
             }
-            vis.append("svg:path").data([currData]).attr("diciplina", selecionadas[i][0]).attr("class", selecionadas[i][6]).attr("d", line).on("mouseover", onmouseover).on("mouseout", onmouseout);
+            vis.append("svg:path").data([currData]).attr("diciplina", selecionadas[i][0]).attr("class", selecionadas[i][6]).attr("d", line).on("mouseover", onmouseover).on("mouseout", onmouseout).on("click", onclick);
         }
    
     vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis")
@@ -311,8 +320,8 @@ var e = document.getElementById("CourseSelect");
         });
        
         findMinMax(selecionadas);
-        y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h - 10]);
-        x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
+        y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h ]);
+        x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-10]);
         Chart();
 
     })
