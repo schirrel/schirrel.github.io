@@ -138,25 +138,38 @@ function Chart() {
         }
     }
 
-    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
-    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
+    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; });
+    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; });
+    
+        vis.append("svg:text")
+            .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+            .attr("transform", "translate("+ 60 +","+(h/2)+")rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
+            .text("Number of Students (square root)");
+
+        vis.append("svg:text")
+            .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+            .attr("transform", "translate("+ (w/2) +","+(h)+")")  // centre below axis
+            .text("Years");
+        
     vis.selectAll(".xLabel").data(x.ticks(5)).enter().append("svg:text").attr("class", "xLabel").text(String).attr("x", function(d) {
         return x(d)
-    }).attr("y", h - 10).attr("text-anchor", "middle")
+    }).attr("y", h - 10).attr("text-anchor", "middle");
     vis.selectAll(".yLabel").data(y.ticks(4)).enter().append("svg:text").attr("class", "yLabel").text(String).attr("x", 0).attr("y", function(d) {
         return y(d)
-    }).attr("text-anchor", "right").attr("dy", 3)
+    }).attr("text-anchor", "right").attr("dy", 3);
+  
     vis.selectAll(".xTicks").data(x.ticks(3)).enter().append("svg:line").attr("class", "xTicks").attr("x1", function(d) {
         return x(d);
     }).attr("y1", y(startAge)).attr("x2", function(d) {
         return x(d);
-    }).attr("y2", y(startAge) + 7)
+    }).attr("y2", y(startAge) + 7);
     vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
         return y(d);
     }) .style("stroke", function(d) { return "#666666"; }).attr("x1", x(2009)).attr("y2", function(d) {
         return y(d);
-    }).attr("x2", x(2014))
+    }).attr("x2", x(2014));
 
+        
     function onclick(d, i) {
         MakeTable();
         $("#datatable").show();
@@ -387,7 +400,7 @@ $("input:checkbox[name=courseCheck]:checked").each(function(){
         });
        
         findMinMax(selecionadas);
-         console.log(MIN+" "+MAX);
+      //  console.log(MIN+" "+MAX);
         // y = d3.scale.linear().domain([MAX, MIN]).range([margin , h -20]);
         // x = d3.scale.linear().domain([2009, 2014]).range([0 + margin - 10, w-90]);
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .1)]).range([0, h]);
