@@ -13,6 +13,7 @@ var regions = {
 var MIN = Number.MAX_VALUE,
     MAX = 0;
 var selecionadas = [];
+var color = d3.scale.category10();
 
 var countries_regions = {};
 
@@ -96,6 +97,7 @@ function containsCurso(a, obj) {
 
 
 function Chart() {
+    
     if(selecionadas.length > 0){
     document.getElementById("vis").innerHTML = "";
     var vis = d3.select("#vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
@@ -136,8 +138,8 @@ function Chart() {
         }
     }
 
-    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis")
-    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis")
+    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
+    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
     vis.selectAll(".xLabel").data(x.ticks(5)).enter().append("svg:text").attr("class", "xLabel").text(String).attr("x", function(d) {
         return x(d)
     }).attr("y", h - 10).attr("text-anchor", "middle")
@@ -151,7 +153,7 @@ function Chart() {
     }).attr("y2", y(startAge) + 7)
     vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
         return y(d);
-    }).attr("x1", x(2009)).attr("y2", function(d) {
+    }) .style("stroke", function(d) { return "#666666"; }).attr("x1", x(2009)).attr("y2", function(d) {
         return y(d);
     }).attr("x2", x(2014))
 
@@ -236,8 +238,8 @@ function PlotChart() {
             vis.append("svg:path").data([currData]).attr("diciplina", countries[i][0]).attr("class", countries[i][6]).attr("d", line).on("mouseover", onmouseover).on("mouseout", onmouseout);
         }
     });
-    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis")
-    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis")
+    vis.append("svg:line").attr("x1", x(2009)).attr("y1", y(startAge)).attr("x2", x(2014)).attr("y2", y(startAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
+    vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(startAge)).attr("x2", x(startYear)).attr("y2", y(endAge)).attr("class", "axis").style("stroke", function(d) { return "#000"; })
     vis.selectAll(".xLabel").data(x.ticks(5)).enter().append("svg:text").attr("class", "xLabel").text(String).attr("x", function(d) {
         return x(d)
     }).attr("y", h - 10).attr("text-anchor", "middle")
@@ -288,8 +290,8 @@ function onmouseout(d, i) {
     var currClass = d3.select(this).attr("class");
     var prevClass = currClass.substring(0, currClass.length - 8);
     d3.select(this).attr("class", prevClass);
-    //    $("#default-blurb").show();
-    //    $("#blurb-content").html('');
+//        $("#default-blurb").show();
+        $("#blurb-content").html('<br />');
 }
 
 function showRegion(regionCode) {
