@@ -1,3 +1,4 @@
+var MOSTRAR_NOME = false;
 var regions = {
         "PUB": "Public",
         "PRIV": "Private"
@@ -13,10 +14,7 @@ var MIN = Number.MAX_VALUE,
 var selecionadas = [];
 var color = d3.scale.category10();
 
-var countries_regions = {};
-
-var startEnd = {},
-    countryCodes = {};
+var startEnd = {};
 
 /*
  * Encontrar os valores minimos e maximos da seleção de cursos para ajustar a escala do grafico
@@ -41,7 +39,7 @@ function findMinMax(list) {
  * Cria o grafico para mostrar
  */
 function Chart() {
-
+    /* Se algum curso foi selecionado via checkbox então carrega o grafico só com ele, senão, carrega o grafico inicial com todos*/
     if (selecionadas.length > 0) {
         document.getElementById("vis").innerHTML = "";
         var vis = d3.select("#vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
@@ -55,7 +53,6 @@ function Chart() {
             var values = selecionadas[i].slice(1, selecionadas[i.length - 1]);
             var currData = [];
 
-            //countryCodes[countries[i][7]] = countries[i][0];
             var started = false;
 
             for (j = 0; j < values.length; j++) {
@@ -131,23 +128,8 @@ function Chart() {
                 d3.select(this).classed('selected', true);
             }
         }
-        /*
-         * Muda a cor da linha e coloca o nome do curso em evidencia
-         */
-        function onmouseover(d, i) {
-            var currClass = d3.select(this).attr("class");
-            d3.select(this).attr("class", currClass + " current");
-            var countryCode = $(this).attr("diciplina");
-            //console.log(countryCode);
-            var countryVals = startEnd[countryCode];
-            //  var percentChange = 100 * (countryVals['endVal'] - countryVals['startVal']) / countryVals['startVal'];
-            var blurb = countryCode;
+       
 
-
-            //        blurb += "</p>";
-
-            $("#blurb-content").html(blurb);
-        }
     } else {
         Load();
     }
@@ -165,10 +147,40 @@ function onmouseout(d, i) {
     var currClass = d3.select(this).attr("class");
     var prevClass = currClass.substring(0, currClass.length - 8);
     d3.select(this).attr("class", prevClass);
-    //        $("#default-blurb").show();
-    //        $("#blurb-content").html('<br />');
+    //        $("#default-coursename").show();
+    //        $("#coursename-content").html('<br />');
 }
 
+ /*
+         * Muda a cor da linha e coloca o nome do curso em evidencia
+         */
+function onmouseover(d, i) {
+            var currClass = d3.select(this).attr("class");
+            d3.select(this).attr("class", currClass + " current");
+            var coursename = $(this).attr("diciplina");
+    if(MOSTRAR_NOME) {
+            $("#coursename-content").html("<b>"+coursename+"</b>");
+    }
+    else{
+            var value="";
+            var uni = "";
+           if($(this)[0]["__data__"][5]['y']=='PRIV') {
+                uni = "Private";
+            } else if ($(this)[0]["__data__"][5]['y']=='PUB')
+           {
+               uni = "Public"; 
+           }
+            for(var i = 0; i < 5; i++) {
+               
+                value +="&nbsp;&nbsp;&nbsp;&nbsp;"+$(this)[0]["__data__"][i]['x']+": "+$(this)[0]["__data__"][i]['y']+".";
+                
+            }
+          
+            
+            $("#coursename-content").html("<b>"+coursename+"</b>, "+uni+". &nbsp;&nbsp;&nbsp; "+value);
+        
+        }
+}
 
 /*
  * Mudar a cor da linha do curso quando selecionado o tipo de universidade
@@ -214,14 +226,23 @@ function Load() {
 function MakeCheck() {
 
     var container = document.getElementById("CourseChecks");
-
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-
-
+var left = document.getElementById("CourseChecksL");
+    var right = document.getElementById("CourseChecksR");
+//    while (container.firstChild) {
+//        container.removeChild(container.firstChild);
+//    }
+if(left.childElementCount > 0 ) {
+    while (left.firstChild) {
+        left.removeChild(left.firstChild);
+    } 
+}
+   if(right.childElementCount > 0 ){
+   while (right.firstChild) {
+        right.removeChild(right.firstChild);
+    }}
+    
     for (var j = 1; j < selecionadas.length / 2; j++) {
-
+        
         var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.name = "courseCheck";
@@ -233,13 +254,21 @@ function MakeCheck() {
             Check();
         }
         var label = document.createElement('label')
+        label.style.fontSize = "8px"
         label.htmlFor = "id";
         label.appendChild(document.createTextNode(selecionadas[j][0]));
-
-        container.appendChild(checkbox);
-        container.appendChild(label);
-        if (j > 0 && j % 2 == 0)
-            container.appendChild(document.createElement("br"));
+if ( j % 2 == 0) {
+        left.appendChild(checkbox);
+    left.appendChild(label);
+    left.appendChild(document.createElement("br"));
+    } else {
+             right.appendChild(checkbox);
+    right.appendChild(label); 
+         right.appendChild(document.createElement("br"));
+    }
+//        container.appendChild(checkbox);
+//        container.appendChild(label);
+//        container.appendChild(document.createElement("br"));
     };
 
 }
@@ -271,7 +300,7 @@ function Check() {
         });
 
         findMinMax(selecionadas);
-        console.log(MIN+" "+MAX);
+       
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2013.5]).range([0 + margin - 10, w - 10]);
         Chart();
