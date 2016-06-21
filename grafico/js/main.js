@@ -81,7 +81,7 @@ function Chart() {
             }
         }
 
-            vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(MIN)).attr("x2", x(2013.5)).attr("y2", y(MIN)).attr("class", "axis").style("stroke", function(d) { return "#000"; });
+//            vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(MIN)).attr("x2", x(2013.5)).attr("y2", y(MIN)).attr("class", "axis").style("stroke", function(d) { return "#000"; });
 
         vis.append("svg:line").attr("x1", x(startYear)).attr("y1", y(MIN)).attr("x2", x(startYear)).attr("y2", y(MAX)).attr("class", "axis").style("stroke", function(d) {
             return "#000";
@@ -104,26 +104,26 @@ function Chart() {
             return y(d)
         }).attr("text-anchor", "right").attr("dy", 3);
 
-//        vis.selectAll(".xTicks").data(x.ticks(6)).enter().append("svg:line").attr("class", "xTicks").attr("x1", function(d) {
-//            return x(d);
-//        }).attr("y1", y(MIN)).attr("x2", function(d) {
-//            return x(d);
-//        }).attr("y2", y(MIN) + 7);
-//        vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
-//            return y(d + 60);
-//        }).style("stroke", function(d) {
-//            return "#666666";
-//        }).attr("x1", x(2009)).attr("y2", function(d) {
-//            return y(d + 60);
-//        }).attr("x2", x(2013));
-//  var yScale = d3.scale.linear()
-//	        .domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
-//         var yAxis = d3.svg.axis()
-//            .orient("left")
-//            .scale(yScale);
-//vis.select(".yaxis")
-//                    .transition().duration(1500).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
-//                    .call(yAxis);  
+        vis.selectAll(".xTicks").data(x.ticks(6)).enter().append("svg:line").attr("class", "xTicks").attr("x1", function(d) {
+            return x(d);
+        }).attr("y1", y(MIN)).attr("x2", function(d) {
+            return x(d);
+        }).attr("y2", y(MIN) + 7);
+        vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
+            return y(d + 60);
+        }).style("stroke", function(d) {
+            return "#666666";
+        }).attr("x1", x(2009)).attr("y2", function(d) {
+            return y(d + 60);
+        }).attr("x2", x(2013));
+  var yScale = d3.scale.linear()
+	        .domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
+         var yAxis = d3.svg.axis()
+            .orient("left")
+            .scale(yScale);
+vis.select(".yaxis")
+                    .transition().duration(1500).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+                    .call(yAxis);  
 
         function onclick(d, i) {
 
@@ -305,7 +305,7 @@ function Check() {
         });
 
         findMinMax(selecionadas);
-       console.log(MIN+" "+MAX)
+     
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .05)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2013.5]).range([0 + margin - 10, w - 10]);
         
