@@ -50,30 +50,7 @@
                   <br />  <br />
                    </div>   
                    <div >
-                    <table id="datatable" style="width:100%;display:none">
-  <thead>
-    <td>Year</td>
-    <td>Public</td>
-    <td>Private</td>
-                        </thead>
-  <tr>
-    <td>2009</td>
-    <td>Jackson</td>
-
-  </tr>
-     <tr>
-    <td>2010</td>
-    <td>Jackson</td>
-
-  </tr>
-                        
-                         <tr>
-    <td>2011</td>
-    <td>Jackson</td>
-
-  </tr>
-                        
-</table> 
+                   
                    
                    </div>
                   <!--      <button onclick="ShowChart()">Show Chart</button>            -->
@@ -85,9 +62,9 @@
       <script type="text/javascript">
          $(document).ready(function() {
              $('#filters a').click(function() {
-                 var countryId = $(this).attr("id");
-                 $(this).toggleClass(countryId);
-                 showRegion(countryId);
+                 var course = $(this).attr("id");
+                 $(this).toggleClass(course);
+                 showCourse(course);
              });
              
          });
