@@ -1,3 +1,4 @@
+/* VERDADEIRO PARA MOSTRAR SOMENTE NOME DO CURSO, FALSO PARA MOSTRAR VALORES JUNTOS*/
 var MOSTRAR_NOME = false;
 var regions = {
         "PUB": "Public",
@@ -11,6 +12,7 @@ var regions = {
     years = d3.range(startYear, endYear);
 var MIN = Number.MAX_VALUE,
     MAX = 0;
+var global = {min: 0, max: 0};
 var selecionadas = [];
 var color = d3.scale.category10();
 
@@ -102,19 +104,26 @@ function Chart() {
             return y(d)
         }).attr("text-anchor", "right").attr("dy", 3);
 
-        vis.selectAll(".xTicks").data(x.ticks(6)).enter().append("svg:line").attr("class", "xTicks").attr("x1", function(d) {
-            return x(d);
-        }).attr("y1", y(MIN)).attr("x2", function(d) {
-            return x(d);
-        }).attr("y2", y(MIN) + 7);
-        vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
-            return y(d + 60);
-        }).style("stroke", function(d) {
-            return "#666666";
-        }).attr("x1", x(2009)).attr("y2", function(d) {
-            return y(d + 60);
-        }).attr("x2", x(2013));
-
+//        vis.selectAll(".xTicks").data(x.ticks(6)).enter().append("svg:line").attr("class", "xTicks").attr("x1", function(d) {
+//            return x(d);
+//        }).attr("y1", y(MIN)).attr("x2", function(d) {
+//            return x(d);
+//        }).attr("y2", y(MIN) + 7);
+//        vis.selectAll(".yTicks").data(y.ticks(4)).enter().append("svg:line").attr("class", "yTicks").attr("y1", function(d) {
+//            return y(d + 60);
+//        }).style("stroke", function(d) {
+//            return "#666666";
+//        }).attr("x1", x(2009)).attr("y2", function(d) {
+//            return y(d + 60);
+//        }).attr("x2", x(2013));
+//  var yScale = d3.scale.linear()
+//	        .domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
+//         var yAxis = d3.svg.axis()
+//            .orient("left")
+//            .scale(yScale);
+//vis.select(".yaxis")
+//                    .transition().duration(1500).ease("sin-in-out")  // https://github.com/mbostock/d3/wiki/Transitions#wiki-d3_ease
+//                    .call(yAxis);  
 
         function onclick(d, i) {
 
@@ -211,6 +220,8 @@ function Load() {
 
         MakeCheck();
         findMinMax(selecionadas);
+        global.max = MAX;
+        global.min = MIN;
         y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2013.5]).range([0 + margin - 10, w - 10]);
         Chart();
@@ -225,12 +236,9 @@ function Load() {
  */
 function MakeCheck() {
 
-    var container = document.getElementById("CourseChecks");
 var left = document.getElementById("CourseChecksL");
     var right = document.getElementById("CourseChecksR");
-//    while (container.firstChild) {
-//        container.removeChild(container.firstChild);
-//    }
+
 if(left.childElementCount > 0 ) {
     while (left.firstChild) {
         left.removeChild(left.firstChild);
@@ -266,9 +274,6 @@ if ( j % 2 == 0) {
     right.appendChild(label); 
          right.appendChild(document.createElement("br"));
     }
-//        container.appendChild(checkbox);
-//        container.appendChild(label);
-//        container.appendChild(document.createElement("br"));
     };
 
 }
@@ -300,9 +305,11 @@ function Check() {
         });
 
         findMinMax(selecionadas);
-       
-        y = d3.scale.linear().domain([MAX, MIN - (MAX * .2)]).range([0 + margin, h]);
+       console.log(MIN+" "+MAX)
+        y = d3.scale.linear().domain([MAX, MIN - (MAX * .05)]).range([0 + margin, h]);
         x = d3.scale.linear().domain([2009, 2013.5]).range([0 + margin - 10, w - 10]);
+        
+            
         Chart();
     });
 
