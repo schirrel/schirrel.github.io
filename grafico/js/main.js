@@ -93,8 +93,8 @@ function Chart() {
             .text("Number of Students (square root)");
 
         vis.append("svg:text")
-            .attr("text-anchor", "middle") // this makes it easy to centre the text as the transform is applied to the anchor
-            .attr("transform", "translate(" + (w / 2) + "," + (h - 50) + ")") // centre below axis
+            .attr("text-anchor", "start") // this makes it easy to centre the text as the transform is applied to the anchor
+            .attr("transform", "translate(" + (20) + "," + (h - 20) + ")") // centre below axis
             .text("Years");
 
         vis.selectAll(".xLabel").data(x.ticks(4)).enter().append("svg:text").attr("class", "xLabel").text(String).attr("x", function(d) {
