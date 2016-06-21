@@ -4,8 +4,8 @@ var regions = {
         "PUB": "Public",
         "PRIV": "Private"
     },
-    w = 980,
-    h = 600,
+    w = 880,
+    h = 500,
     margin = 80,
     startYear = 2009,
     endYear = 2014,
