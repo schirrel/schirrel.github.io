@@ -101,13 +101,13 @@ input[type=checkbox] {
 /*   // padding-top: 20px;*/
 }
 path {
-    stroke: #4d4d4d;
+    stroke: #00ff00;
     stroke-width: 0.9;
     fill: none;
 }
 path.current,
 path.highlight.current {
-    stroke: #000;
+    stroke: #ff0000;
     stroke-width: 1.7;
 }
 .PUB.highlight {

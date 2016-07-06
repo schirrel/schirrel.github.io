@@ -235,20 +235,23 @@ function Load() {
  * Cria os checkbox de acordo com o arquivo de cursos
  */
 function MakeCheck() {
-
-var left = document.getElementById("CourseChecksL");
-    var right = document.getElementById("CourseChecksR");
-
-if(left.childElementCount > 0 ) {
-    while (left.firstChild) {
-        left.removeChild(left.firstChild);
-    } 
-}
-   if(right.childElementCount > 0 ){
-   while (right.firstChild) {
-        right.removeChild(right.firstChild);
-    }}
+var content = document.getElementById("CourseChecks");
+//var left = document.getElementById("CourseChecksL");
+//    var right = document.getElementById("CourseChecksR");
+//
+//if(left.childElementCount > 0 ) {
+//    while (left.firstChild) {
+//        left.removeChild(left.firstChild);
+//    } 
+//}
+//   if(right.childElementCount > 0 ){
+//   while (right.firstChild) {
+//        right.removeChild(right.firstChild);
+//    }}
     
+      while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
     for (var j = 1; j < selecionadas.length / 2; j++) {
         
         var checkbox = document.createElement('input');
@@ -265,15 +268,18 @@ if(left.childElementCount > 0 ) {
         label.style.fontSize = "8px"
         label.htmlFor = "id";
         label.appendChild(document.createTextNode(selecionadas[j][0]));
-if ( j % 2 == 0) {
-        left.appendChild(checkbox);
-    left.appendChild(label);
-    left.appendChild(document.createElement("br"));
-    } else {
-             right.appendChild(checkbox);
-    right.appendChild(label); 
-         right.appendChild(document.createElement("br"));
-    }
+        content.appendChild(checkbox);
+        content.appendChild(label);
+        content.appendChild(document.createElement("br"));
+//if ( j % 2 == 0) {
+//        left.appendChild(checkbox);
+//    left.appendChild(label);
+//    left.appendChild(document.createElement("br"));
+//    } else {
+//             right.appendChild(checkbox);
+//    right.appendChild(label); 
+//         right.appendChild(document.createElement("br"));
+//    }
     };
 
 }
