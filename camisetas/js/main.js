@@ -1,7 +1,7 @@
 var ref = new Firebase("https://sicamisetas.firebaseio.com/pedidos");
 
 
-var modelos = {m1: 0, m2:0,m3:0,m4:0,m5:0, m6:0, m7:0}
+var modelos = {m1: 0, m2:0,m3:0}
 var pedido = {nome : "", semestre: "", telefone:"", qtds: null, tamanho:""}
 function fazerPedido(){
   if(($("#nome").val() == "" || $("#nome").val() == "Nome" )
@@ -17,10 +17,6 @@ function fazerPedido(){
     modelos.m1 = $("#selectMod1").val() == "Qtd"? 0: $("#selectMod1").val()/1;
     modelos.m2 = $("#selectMod2").val() == "Qtd"? 0: $("#selectMod2").val()/1;
     modelos.m3 = $("#selectMod3").val() == "Qtd"? 0: $("#selectMod3").val()/1;
-    modelos.m4 = $("#selectMod4").val() == "Qtd"? 0: $("#selectMod4").val()/1;
-    modelos.m5= $("#selectMod5").val() == "Qtd"? 0: $("#selectMod5").val()/1;
-    modelos.m6= $("#selectMod6").val() == "Qtd"? 0: $("#selectMod6").val()/1;
-    modelos.m7= $("#selectMod7").val() == "Qtd"? 0: $("#selectMod7").val()/1;
 
     pedido.nome =  $("#nome").val();
     pedido.semestre =   $("#semestre").val();
@@ -47,11 +43,6 @@ $("#selectTamanho").prop('selectedIndex',0);
 $("#selectMod1").prop('selectedIndex',0);
 $("#selectMod2").prop('selectedIndex',0);
 $("#selectMod3").prop('selectedIndex',0);
-$("#selectMod4").prop('selectedIndex',0);
-$("#selectMod5").prop('selectedIndex',0);
-$("#selectMod6").prop('selectedIndex',0);
-$("#selectMod7").prop('selectedIndex',0);
-
 
 
         alert("Pedido Salvo");
@@ -69,11 +60,11 @@ $("#selectMod7").prop('selectedIndex',0);
 
 function checarTodosOsModelos(){
   var oc=0;
-  for(var i = 1; i < 8; i++) {
+  for(var i = 1; i < 4; i++) {
     if($("#selectMod"+i).val() == "Qtd"){
       oc++;
     }
 
   }
-  return oc == 7;
+  return oc == 3;
 }
