@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+
+<head>
+    <title>Icon to PNG Converter </title>
+    <link rel="stylesheet" href="icofont/css/icofont.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="https://github.com/niklasvh/html2canvas/releases/download/0.4.1/html2canvas.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <script type="text/javascript">
+        function download() {
+            $("#img-out").empty();
+            html2canvas($("#downloadicone"), {
+                onrendered: function (canvas) {
+                    theCanvas = canvas;
+                    document.body.appendChild(canvas);
+                    // Convert and download as image 
+                    //Canvas2Image.saveAsPNG(canvas);
+                    $("#img-out").append(canvas);
+                    // Clean up 
+                }
+            });
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'PT Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="">
+        <div class="content" style="padding-top: 15px">
+            <div class="container-fluid">
+                <h1><strong>Icone > PNG</strong></h1>
+                <div class="jumbotron">
+                    <div class="row form-group">
+                        <div class="col-lg-10">
+                            <div class="input-group form-group"> <span class="input-group-addon" id="basic-addon1">Icone</span>
+                                <input type="text" class="form-control" placeholder="fa... icofont.." ng-model="icone" aria-describedby="basic-addon1"> </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="button" class="btn btn-primary" onclick="download()">Gerar Imagem</button>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6">
+                            <p>Icone: </p>
+                            <div><i class="{{icone}}" id="downloadicone" style="font-size:300px; padding:5px; color: white; "></i> </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Imagem: </p>
+                            <div id="img-out"></div> <small>Botão direito do mouse > Salvar imagem como</small> </div>
+                    </div>
+                </div> <small> Lista de Icones: <a href="http://icofont.com/icons/">Icofont</a> e <a href="http://fontawesome.io/icons/"> Font Awesome</a></small> </div>
+        </div>
+    </div>
+</body>
+
+</html>
