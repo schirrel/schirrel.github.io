@@ -6,8 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="snap.svg-min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" charset="utf-8"></script>
     <title>360</title>
+	<style>
+	
+	body {
+background: url('trianglify.svg');
+text-align: center;
+padding: 5px;
+padding: 5px;
+
+height: 100vh;
+
+width: 100vw;
+
+background: radial-gradient(#fecb1b, #e98719);
+}
+
+svg {
+  width:80%;
+  margin-top:100px
+}
+
+#tres, #seis, #zero {
+  cursor: pointer;
+  transition: all 1s ease
+}
+#svgBackground *:hover {
+  opacity: .6
+}
+
+#zero {
+     transform:matrix(1.8899901,0,0,1.8899901,-287.54516,533.04432);
+}
+
+#tres {
+  transform:matrix(1.8899901,0,0,1.8899901,-287.54516,533.04432);
+
+}
+
+#seis {
+  transform:matrix(1.8899901,0,0,1.8899901,-287.54516,533.04432);
+}
+
+ #path4329, #path4325,#path4321   {
+  transition: all 2s ease;
+}
+
+/* @keyframes tresStrokeAnimation {
+  0%,100%   { transform  : translateX(0px) translateY(0px) }
+  20%   { transform  : translateX(-5px) translateY(5px) }
+  20%   { transform  : translateX(2px) translateY(-5px) }
+  90% { transform  : translateX(5px) translateY(2px)}
+} */
+
+
+/*
+#seis:hover {
+  transform:matrix(1.8899901,0,0,1.8899901,-287.54516,503.04432);
+}
+
+#zero:hover {
+     transform:matrix(1.8899901,0,0,1.8899901,-287.54516,503.04432);
+}
+
+#tres:hover {
+  transform:matrix(1.8899901,0,0,1.8899901,-287.54516,503.04432);
+
+} */
+.360logo {
+    position: absolute;
+}
+.menu {
+  position: absolute;
+  width: 50px;
+  background: white;
+  height: 100vh;
+  top: 0;
+  left: 0px;
+  box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.menu.open {
+
+  width: 80px;
+}
+.menu ul{
+
+   transition: transform .5s ease;
+  position: relative;
+  list-style: none;
+  padding:0px;
+  font-size: 12px;
+  height: 100%;
+  transform: translateY(40%);
+}
+.menu.open ul {
+
+  transform: translateY(20%);
+}
+.menu:not(.open)  li:not(.toggler) {
+  display: none;
+}
+.menu.open li:.toggler {
+  display: none;
+}
+
+.menu.open  li:not(.toggler) {
+  display: block;
+}
+.menu:not(.open) li:.toggler {
+  display: block;
+}
+.menu p{
+  padding: 0px ;
+  margin: 0px
+}
+
+.menu ul li{
+  margin: 12px 5px
+}
+	</style>
 </head>
 
 <body>
@@ -86,13 +206,13 @@
      const movePath = (path, min, max, timeout) => {
          let y = (Math.random(min, max) * 10) * (Math.random(min, max) * 2 % 2 > 1 ? -1 : 1);
          let x = (Math.random(min, max) * 10) * (Math.random(min, max) * 2 % 2 < 0 ? -1 : 1);
-        document.querySelector(path).style.transform = `translateX(${x}px) translateY(${y}px)`;
+         document.querySelector(path).style.transform = `translateX(${x}px) translateY(${y}px)`;
          setTimeout(function() {
              movePath(path, min, max, timeout)
          }, timeout)
      }
     
-     movePath('#path4329', -5, 5, 2500);
+    movePath('#path4329', -5, 5, 2500);
      movePath('#path4325', -5, 5, 2300);
      movePath('#path4321', -5, 5, 2800);
 </script>
