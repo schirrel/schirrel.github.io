@@ -1,15 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Raleway&display=swap');
+
+@import url('tooltip.css');
+
 :root {
     --primary: #5ACDFA;
     --secondary: #f5a8b8;
 }
  * {
-     transition: all 300ms ease;
+  /*   transition: all 300ms ease;*/
+     font-family: 'Baloo 2', cursive;
  }
+  p {
+
+font-family: 'Raleway', sans-serif;
+  }
 body, html {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
 
 header{
@@ -19,18 +31,42 @@ header{
     background: linear-gradient(to right, var(--primary) , var(--secondary));
     padding: 0px 10px;
     display: flex;
+    z-index: 99;
 }
-header span {
-width: 120px;
+header .logo {
+    width: 80px;
+    max-width: 80px;
+    min-width: 80px;
+    overflow: hidden;
+padding: 2px;
+padding-top: 10px;
+}
+header .logo span {
+    overflow: hidden;
+    display: inline-block;
+    width: 14px;
+    font-size: 22px;
+    transition: font-size 300ms ease !important;
+    letter-spacing: 16px;
+    
+}
+ 
+header .logo:hover {
+    padding-top: 5px;
+}
+header .logo:hover span  {
+width: auto;
+font-size: 12px;
+letter-spacing: normal;
 }
 header > nav  {
     min-width: 80vw;
+    flex: 3;
 }
 header > nav > ol {
     display: flex;
     align-items: stretch; /* Default */
     justify-content: space-between;
-    width: 80%;
     margin: 0;
     padding: 0;
     
@@ -39,7 +75,7 @@ header > nav > ol li {
     display: block;
     flex: 0 1 auto; /* Default */
     list-style-type: none;
-    padding: 8px 15px;
+    padding: 12px 15px;
 }
 a,a:visited, a:active, a:link {
     text-transform: none;
@@ -54,7 +90,7 @@ header > nav > ol li:hover a {
     color: white;
 
 }
-header div {
+header div.dropdown {
 
     margin-left: auto;
 }
@@ -82,7 +118,7 @@ ul#languages {
 
 header button:hover + #languages ,
 ul#languages:hover{
-height: 130px;
+height: 120px;
 overflow: visible;
 opacity: 1;
 animation: show 1s forwards;
@@ -103,3 +139,89 @@ animation: show 1s forwards;
     from {opacity:0}
     to {opacity:1}
   }
+
+
+  section {
+     /* padding-top: 30px;*/
+      background: #ececec;
+      min-height:calc(100vh - 20px);
+      position: relative;
+  }
+  section::after {
+    margin-left: -15px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 6px;
+    height: 15px;
+    background: linear-gradient(to right, var(--primary) , var(--secondary));
+    transform: skew(45deg);
+    left: -15px;
+    opacity: .5;
+}
+
+section:nth-child(2n)::after  {
+    left: auto;
+    right: -15px; 
+}
+
+  section.hero {
+    padding-top: 30px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  section {
+
+    flex-direction: column;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+section article {
+    height: auto;
+    width: 80%;
+    flex: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section article>h2{
+    margin:20px;
+}
+
+
+section .title {
+    text-align: left;
+    font-size: 11px;
+    padding-top: 5px;
+
+    align-self: normal;
+} 
+
+section article.full-width {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    width: 100%;
+}
+
+.flex-col {
+    flex: 1;
+    padding:5px;
+    margin:5px;
+}
+dt {
+    font-weight: 500;
+    font-style: italic;
+}
+dd {
+    font-size: 12px;
+}

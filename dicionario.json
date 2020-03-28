@@ -3,19 +3,22 @@
         "ptBr": {
             "name": "Português",
             "dictionary": {
-                "whothis": "Quem é esse doido?"
+                "whothis": "Quem é esse doido?",
+                "tricks" : "O cê sabe?"
             }
         },
         "en": {
             "name": "English",
             "dictionary": {
-                "whothis": "Who da F*ck is he?"
+                "whothis": "Who da F*ck is he?",
+                "tricks" : "Show me what u got"
             }
         },
         "it": {
             "name": "Italiano",
             "dictionary": {
-                "whothis": "Chi cazzo è lui?"
+                "whothis": "Chi cazzo è lui?",
+                "tricks" : "Cazzo hai fatto?"
             }
         }
     }
