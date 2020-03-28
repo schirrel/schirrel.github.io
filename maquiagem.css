@@ -1,0 +1,105 @@
+:root {
+    --primary: #5ACDFA;
+    --secondary: #f5a8b8;
+}
+ * {
+     transition: all 300ms ease;
+ }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    position: fixed;
+    height: 40px;
+    width: 99%;
+    background: linear-gradient(to right, var(--primary) , var(--secondary));
+    padding: 0px 10px;
+    display: flex;
+}
+header span {
+width: 120px;
+}
+header > nav  {
+    min-width: 80vw;
+}
+header > nav > ol {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    
+}
+header > nav > ol li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+    padding: 8px 15px;
+}
+a,a:visited, a:active, a:link {
+    text-transform: none;
+    text-decoration: none;
+    color: black;
+}
+header > nav > ol li:hover {
+    background: rgba(0,0,0,0.2);
+}
+header > nav > ol li:hover a {
+    font-weight: 700;
+    color: white;
+
+}
+header div {
+
+    margin-left: auto;
+}
+
+header button {
+    border: none;
+    pointer-events: all;
+    cursor: pointer;
+    background: none;
+}
+
+ul#languages {
+    right: 0px;
+    position: absolute;
+    background: var(--secondary);
+    padding-left: 0px;
+    margin-top: -2px;
+    margin-right: -4px;
+    list-style: none;
+    box-shadow: -2px 2px 4px rgba(0,0,0,0.6);
+    height: 0;
+    opacity: 0;
+    transition: all 300ms, opacity 1000ms;
+}
+
+header button:hover + #languages ,
+ul#languages:hover{
+height: 130px;
+overflow: visible;
+opacity: 1;
+animation: show 1s forwards;
+} 
+
+
+#languages li {
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+#languages li:hover {
+
+    background: var(--primary);
+}
+
+@keyframes show {
+    from {opacity:0}
+    to {opacity:1}
+  }

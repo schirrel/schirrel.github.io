@@ -1,0 +1,22 @@
+{
+    "languages": {
+        "ptBr": {
+            "name": "Português",
+            "dictionary": {
+                "whothis": "Quem é esse doido?"
+            }
+        },
+        "en": {
+            "name": "English",
+            "dictionary": {
+                "whothis": "Who da F*ck is he?"
+            }
+        },
+        "it": {
+            "name": "Italiano",
+            "dictionary": {
+                "whothis": "Chi cazzo è lui?"
+            }
+        }
+    }
+}
