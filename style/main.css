@@ -212,6 +212,12 @@ body[data-section] section {
   opacity: 0;
 }
 
-body.has-selected-section section {
+body[data-section-active] section {
   display: none;
+}
+
+
+body[data-section] section.active  {
+  display: block;
+  opacity: 1;
 }
