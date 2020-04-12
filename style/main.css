@@ -1,8 +1,6 @@
-:root {
-  --primary: #5acdfa;
-  --secondary: #f5a8b8;
-  --background: #0f0f0f;
-}
+@import url('variaveis.css');
+@import url('menu.css');
+@import url('responsive.css');
 
 body,
 html {
@@ -39,6 +37,17 @@ article {
   margin: 20px 30px 20px 20px;
   padding: 20px;
 }
+
+ 
+article:hover{
+
+    box-shadow: 0px 0px 20px #000000;
+ }
+article:hover:before,
+article:hover:after {
+    transform: skewY(0deg);
+    border-color: white;
+}
 article:before,
 article:after {
   content: "";
@@ -65,4 +74,9 @@ article:after {
 body.scrolling article:after,
 body.scrolling article:before {
   transform: skewY(-2deg);
+}
+
+ul, ol {
+
+  list-style: none;
 }

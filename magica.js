@@ -1,3 +1,8 @@
+import initDictionary from './scripts/translation.js';
+
+
+initDictionary();
+
 const menuItens = Array.from(document.querySelectorAll('aside nav a'));
 
 const handleMenuClick = (event) => {

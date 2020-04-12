@@ -1,0 +1,22 @@
+{
+    "languages": {
+        "ptBr": {
+            "name": "Português",
+            "dictionary": {
+                "about": "Sobre",
+                "xp" : "Experiência",
+                "skils":"Habilidades",
+                "contact":"Contato"
+            }
+        },
+        "en": {
+            "name": "English",
+            "dictionary": {
+                "about": "About",
+                "xp" : "XP",
+                "skils":"Skils",
+                "contact":"Contact"
+            }
+        }
+    }
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/menu.css" />
     <title>Alan Balen Schio - @schirrel</title>
   </head>
   <body>
@@ -12,43 +11,66 @@
       <aside>
         <div class="me">
           <div class="img-wraper">
-            <img src="alan.jpg" />
+            <img src="assets/alan.jpg" />
           </div>
         </div>
+        <div class="translations">
+          <ul id="languages"></ul>
+        </div>
         <nav>
-          <a href="#about" data-text="Sobre">Sobre</a>
-          <a href="#xp" data-text="Experiência">Experiência</a>
-          <a href="#skils" data-text="Habilidades">Habilidades</a>
-          <a href="#contact" data-text="Contato">Contato</a>
+          <a href="#about" data-i18n="about" data-text="Sobre">Sobre</a>
+          <a href="#xp" data-i18n="xp" data-text="Experiência">Experiência</a>
+          <a href="#skils" data-i18n="skils" data-text="Habilidades"
+            >Habilidades</a
+          >
+          <a href="#contact" data-i18n="contact" data-text="Contato">Contato</a>
         </nav>
       </aside>
       <section>
         <article id="about">
           <div class="content">
+            <h1 data-i18n="about">Sobre </h1>
             conteudo Sobre
           </div>
         </article>
 
         <article id="xp">
+          <h1 data-i18n="xp" >Experiência</h1>
           <div class="content">
-            conteudo Experiência
+            <ol>
+              <li> 
+                <h6> Desenvolvimento Full Stack - 2016 -2020</h6>
+                <p></p>
+              </li>
+
+              <li> 
+                <h6> Desenvolvimento Embarcado - 2016 {Estágio}</h6>
+                <p></p>
+              </li>
+              <li> 
+                <h6> Desenvolvimento de Jogos - 2015 {Estágio}</h6>
+                <p></p>
+              </li>
+            </ol>
           </div>
         </article>
 
         <article id="skils">
           <div class="content">
+            <h1 data-i18n="skils">Habilidades </h1>
             conteudo Habilidades
           </div>
         </article>
 
         <article id="contact">
           <div class="content">
-            conteudo Contato
+            <h1 data-i18n="contact">Contato </h1>
+            GitHub LinkedIn E-mail
           </div>
         </article>
       </section>
     </main>
 
-    <script src="magica.js"></script>
+    <script type="module" src="magica.js"></script>
   </body>
 </html>
