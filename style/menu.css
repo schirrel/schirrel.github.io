@@ -3,6 +3,8 @@
     width: 200px;
     display: block;
     height: 100vh;
+    margin: 0;
+    top: 0;
     }
     .me img {
     width: 78px;
@@ -78,7 +80,7 @@
     left: 2px;
     line-height: 0px;
     overflow: hidden;
-    padding-bottom: 9px;
+    padding-bottom: 11px;
     margin-top: 14px;
     }
     nav a[data-text]:hover:after {

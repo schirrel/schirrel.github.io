@@ -6,7 +6,26 @@
                 "about": "Sobre",
                 "xp" : "Experiência",
                 "skils":"Habilidades",
-                "contact":"Contato"
+                "contact":"Contato",
+                "internship":"Estágio",
+                "me":"Oi, eu sou o Alan.",
+                "resume":"Sou Desenvolvedor Front End focado em criação de interfaçes e componentes.",
+                "description-start":"Sou um apaixonado por ",
+                "description-pretty-screens":"telas bonitas",
+                "description-middle":"por isso meus estudos são focados e minhas habilidades principais são HTML, CSS, SVG e JavaScript",
+                "description-vanilla-js":"puro",
+                "description-end":"assim consigo utilizar meus conhecimentos independente de framework.",
+                "kiss":"Eu gosto de deixar tudo simples,nada de canhões para matar uma simples formiga.",
+                "main":"Principais",
+                "canwork":"Conseguiria trabalhar com",
+                "wanttowork":"Gostaria de trabalhar com",
+                "svganimation":"Animações de SVG",
+                "componentization":"Componentização",
+                "jmj":"Desenvolvimento Full Stack com foco em Font End",
+                "invent":"Desenvolvimento Embarcado",
+                "defiant":"Desenvolvimento de Jogos",
+                "ufms":"Bacharelado em Sistemas de Informação",
+                "nci":"BSc Computing - 3º ano, Ciência Sem Fronteiras"
             }
         },
         "en": {
@@ -15,7 +34,26 @@
                 "about": "About",
                 "xp" : "XP",
                 "skils":"Skils",
-                "contact":"Contact"
+                "contact":"Contact",
+                "me":"Hi, my name is Alan",
+                "resume":"I am a Front End developer, my targets are UI, UX and Componentization. ",
+                "description-start":"I'm a lover of ",
+                "description-pretty-screens":"pretty screens",
+                "description-middle":"that's why i constantly study about and my main skills are HTML, CSS, SVG and JavaScript",
+                "description-vanilla-js":"vanilla/plain",
+                "description-end":"this way i can use my knowledge without worring about framework.",
+                "kiss":"I rather to keep everything as simple as possible, no canon to kill an ant.",
+                "internship":"Internship",
+                "main":"Main",
+                "canwork":"Can do a thing or two",
+                "wanttowork":"Wish to work with",
+                "svganimation":"SVG's animation",
+                "componentization":"Componentization",
+                "jmj":"Full Stack Web Dev with focus on Front End",
+                "invent":"3D Printer's Firmware Dev",
+                "defiant":"Game Dev",
+                "ufms":"BSc Information Systems",
+                "nci":"BSc Computing - 3th year (Exchange Program)"
             }
         }
     }

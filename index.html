@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,16 +21,25 @@
           <a href="#about" data-i18n="about" data-text="Sobre">Sobre</a>
           <a href="#xp" data-i18n="xp" data-text="Experiência">Experiência</a>
           <a href="#skils" data-i18n="skils" data-text="Habilidades"
-            >Habilidades</a
-          >
+            >Habilidades</a>
+            <a data-section="blog" href="#blog" data-text="Blog">Blog</a>
           <a href="#contact" data-i18n="contact" data-text="Contato">Contato</a>
         </nav>
       </aside>
-      <section>
+      <section id="site">
         <article id="about">
           <div class="content">
-            <h1 data-i18n="about">Sobre</h1>
-            conteudo Sobre
+            <h1 data-i18n="me">Oi, eu sou o Alan.</h1>
+            
+           <h4 data-i18n="resume">Sou Desenvolvedor Front End focado em criação de interfaçes e componentes.</h4>
+            <p >
+              <span data-i18n="description-start">Sou um apaixonado por </span>
+              <em  data-i18n="description-pretty-screens" class="text-primary">telas bonitas</em>,
+            <span  data-i18n="description-middle">por isso meus estudos são focados e minhas habilidades principais são HTML, CSS, SVG e JavaScript</span> <b  data-i18n="description-vanilla-js">puro</b>,
+          <span  data-i18n="description-end">assim consigo utilizar meus conhecimentos independente de framework.</span>
+        </p>
+  
+        <h5 class="text-primary" data-i18n="kiss"></h5>
           </div>
         </article>
 
@@ -38,61 +47,77 @@
           <h1 data-i18n="xp">Experiência</h1>
           <div class="content">
             <ol>
-              <li>
+              <li data-prefix="2020 - 2016">
                 <h6>
-                  Desenvolvimento Full Stack - 2016 -2020 <br />
+                  <span data-i18n="jmj">Desenvolvimento Full Stack com foco em Font End</span> <br />
                   <small>JMJ Sistemas e Consultoria - Sinop (MT)</small>
                 </h6>
               </li>
 
-              <li>
+              <li data-prefix="2016">
                 <h6>
-                  Desenvolvimento Embarcado - 2016 {Estágio}
+                  <span data-i18n="invent">Desenvolvimento Embarcado</span> {<span data-i18n="internship">Estágio</span>}
                   <br />
                   <small>Invent Robotics - BH (MG)</small>
                 </h6>
               </li>
-              <li>
+              <li data-prefix="2015">
                 <h6>
-                  Desenvolvimento de Jogos - 2015 {Estágio}
+                  <span data-i18n="defiant">Desenvolvimento de Jogos</span> {<span data-i18n="internship">Estágio</span>}
                   <br />
                   <small>Defiant Games - Dublin (IE)</small>
                 </h6>
               </li>
+              <li data-prefix="2015 - 2014">
+                <h6>
+                  <span data-i18n="nci">BSc Computing - 3th Year</span>
+                  <br />
+                  <small>National College of Ireland</small>
+                </h6>
+              </li>
+              <li data-prefix="2016 - 2011">
+                <h6>
+                  <span data-i18n="ufms">Graduação em Sistemas de Informação</span>
+                  <br />
+                  <small>UFMS</small>
+                </h6>
+              </li>
             </ol>
+
+
           </div>
         </article>
 
         <article id="skils">
           <div class="content">
             <h1 data-i18n="skils">Habilidades</h1>
-            <h4>Principais:</h4>
+            <h4 data-i18n="main">Principais</h4>
             <ul>
-              <li>VueJs || AngularJS</li>
-              <li>JavaScript Vanilla</li>
-              <li>CSS</li>
-              <li>Animações de SVG</li>
-              <li>Java, JavaEE, Spring Boot</li>
-              <li>UI/UX</li>
+              <li>VueJs || AngularJS; </li>
+              <li>JavaScript Vanilla; </li>
+              <li>CSS; </li>
+              <li data-i18n="svganimation">Animações de SVG; </li>
+              <li>Java, JavaEE, Spring Boot; </li>
+              <li>UI/UX.</li>
             </ul>
             <hr />
-            <h4>Conseguiria trabalhar com</h4>
+            <h4 data-i18n="canwork">Conseguiria trabalhar com</h4>
             <ul>
-              <li>React || Angular >= 2</li>
-              <li>NodeJS</li>
-              <li>Ionic</li>
-              <li>C#</li>
-              <li>PHP</li>
-              <li>Vraptor (Java)</li>
+              <li>React || Angular >= 2; </li>
+              <li>NodeJS; </li>
+              <li>Ionic || Cordova; </li>
+              <li>C# || C++; </li>
+              <li>PHP; </li>
+              <li>Vraptor (Java). </li>
             </ul>
 
             <hr />
-            <h4>Gostaria de trabalhar com:</h4>
+            <h4 data-i18n="wanttowork">Gostaria de trabalhar com</h4>
             <ul>
-              <li>Web Components</li>
-              <li>Componentização</li>
-              <li>Design System</li>
-              <li>OpenSource</li>
+              <li>Web Components;</li>
+              <li data-i18n="componentization">Componentização;</li>
+              <li>Design System;</li>
+              <li>OpenSource.</li>
             </ul>
           </div>
         </article>
@@ -100,9 +125,20 @@
         <article id="contact">
           <div class="content">
             <h1 data-i18n="contact">Contato</h1>
-            GitHub LinkedIn E-mail
+            <div class="content">
+              <a href="http://codepen/com/schirrel" data-text="CodePen"> CodePen </a>
+              <a href="http://github/com/schirrel" data-text="GitHub"> GitHub </a>
+              <a href="http://github/com/schirrel"  data-text="LinkedIn"> LinkedIn </a>
+              <a href="mailto:schirrel@gmail.com"  data-text="E-mail "> E-mail </a>
+
+              </a>
+            </div>
           </div>
         </article>
+      </section>
+      
+      <section id="blog"> 
+
       </section>
     </main>
 
