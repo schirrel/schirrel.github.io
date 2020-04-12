@@ -1,227 +1,121 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Raleway&display=swap');
-
-@import url('tooltip.css');
-
 :root {
-    --primary: #5ACDFA;
-    --secondary: #f5a8b8;
+	--primary: #5acdfa;
+	--secondary: #f5a8b8;
 }
- * {
-  /*   transition: all 300ms ease;*/
-     font-family: 'Baloo 2', cursive;
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	min-width: 100vw;
+	scroll-behavior: smooth;
+	scroll-padding-top: 10px;
+	background: #0f0f0f;
+	color: white
+}
+.content {
+	padding: 10px;
+	margin: 20px;
+	min-height: 100%;
+	position: relative;
+	display: block;
+}
+
+aside {
+	position: fixed;
+	width: 200px;
+	display: block;
+	height: 100vh;
+}
+ nav {
+	 position: relative;
+	 display: block;
+	 padding: 5px;
+	 margin-top: 15px;
+	 margin-left: 5px;
+
+	}
+
+ nav a,
+ nav a:link,
+ nav a:visited,
+ nav a:active
+  {
+	 display: block;
+	 color: var(--primary);
+	 text-decoration: none;
  }
-  p {
 
-font-family: 'Raleway', sans-serif;
-  }
-body, html {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    min-width: 100vw;
-    scroll-behavior: smooth;
-    scroll-padding-top: 40px;
-}
+ section {
+	 margin-left: 110px;
+ }
 
-header{
-    position: fixed;
-    height: 40px;
-    width: 99%;
-    background: linear-gradient(to right, var(--primary) , var(--secondary));
-    padding: 0px 10px;
-    display: flex;
-    z-index: 99;
-}
-header .logo {
-    width: 80px;
-    max-width: 80px;
-    min-width: 80px;
-    overflow: hidden;
-padding: 2px;
-padding-top: 10px;
-}
-header .logo span {
-    overflow: hidden;
-    display: inline-block;
-    width: 14px;
-    font-size: 22px;
-    transition: font-size 300ms ease !important;
-    letter-spacing: 16px;
-    
-}
- 
-header .logo:hover {
-    padding-top: 5px;
-}
-header .logo:hover span  {
-width: auto;
-font-size: 12px;
-letter-spacing: normal;
-}
-header > nav  {
-    min-width: 80vw;
-    flex: 3;
-}
-header > nav > ol {
-    display: flex;
-    align-items: stretch; /* Default */
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    
-}
-header > nav > ol li {
+ article {
+	 display: block;
+	 position: relative;
+	 min-height: calc(100vh - 80px);
+	 margin: 20px;
+	 padding: 20px;
+ }
+ article:before,
+ article:after {
+	 content:'';
+	 display: block;
+	 position: absolute;
+	 width: 100%;
+	 height: 50%;
+	 border: 1px solid;
+	 left: 0;
+ }
+ article:before {
+	top: 0;
+border-color: var(--primary);
+border-bottom: none;
+ }
+
+ article:after{
+	 border-top: none;
+	top: 50%;
+	border-color: var(--secondary);
+ }
+
+ nav a[data-text] {
+	 display: block;
+	 position: relative;
+	 color: transparent;
+	 transform: skewY(15deg);
+ }
+
+nav a[data-text]:before,
+nav a[data-text]:after {
+	content: attr(data-text);
     display: block;
-    flex: 0 1 auto; /* Default */
-    list-style-type: none;
-    padding: 12px 15px;
-}
-a,a:visited, a:active, a:link {
-    text-transform: none;
-    text-decoration: none;
-    color: black;
-}
-header > nav > ol li:hover {
-    background: rgba(0,0,0,0.2);
-}
-header > nav > ol li:hover a {
-    font-weight: 700;
-    color: white;
-
-}
-header div.dropdown {
-
-    margin-left: auto;
-}
-
-header button {
-    border: none;
-    pointer-events: all;
-    cursor: pointer;
-    background: none;
-}
-
-ul#languages {
-    right: 0px;
     position: absolute;
-    background: var(--secondary);
-    padding-left: 0px;
-    margin-top: -2px;
-    margin-right: -4px;
-    list-style: none;
-    box-shadow: -2px 2px 4px rgba(0,0,0,0.6);
-    height: 0;
-    opacity: 0;
-    transition: all 300ms, opacity 1000ms;
+    top: 0;
+	font-size: 18px;
+	transition: all 300ms ease;
+	font-weight: 700;
 }
 
-header button:hover + #languages ,
-ul#languages:hover{
-height: 120px;
-overflow: visible;
-opacity: 1;
-animation: show 1s forwards;
-} 
-
-
-#languages li {
-    padding: 10px 25px;
-    cursor: pointer;
+nav a[data-text]:before {
+	color: var(--primary);	
+    line-height: 6px;
+    overflow: hidden;
+    padding-top: 8px;
 }
 
-#languages li:hover {
-
-    background: var(--primary);
+nav a[data-text]:after {
+    color: var(--secondary);
+    top: 1px;
+    left: 2px;
+    line-height: 0px;
+    overflow: hidden;
+    padding-bottom: 9px;
+    margin-top: 14px;
 }
-
-@keyframes show {
-    from {opacity:0}
-    to {opacity:1}
-  }
-
-
-  section {
-     /* padding-top: 30px;*/
-      background: #ececec;
-      min-height:calc(100vh - 20px);
-      position: relative;
-  }
-  section::after {
-    margin-left: -15px;
-    content: '';
-    position: absolute;
-    width: 100%;
-    bottom: 6px;
-    height: 15px;
-    background: linear-gradient(to right, var(--primary) , var(--secondary));
-    transform: skew(45deg);
-    left: -15px;
-    opacity: .5;
-}
-
-section:nth-child(2n)::after  {
-    left: auto;
-    right: -15px; 
-}
-
-  section.hero {
-    padding-top: 30px;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-  section {
-
-    flex-direction: column;
-    display: flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-section article {
-    height: auto;
-    width: 80%;
-    flex: auto;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-section article>h2{
-    margin:20px;
-}
-
-
-section .title {
-    text-align: left;
-    font-size: 11px;
-    padding-top: 5px;
-
-    align-self: normal;
-} 
-
-section article.full-width {
-    width: 100%;
-}
-
-.flex-row {
-    display: flex;
-    width: 100%;
-}
-
-.flex-col {
-    flex: 1;
-    padding:5px;
-    margin:5px;
-}
-dt {
-    font-weight: 500;
-    font-style: italic;
-}
-dd {
-    font-size: 12px;
+nav a[data-text]:hover:after{
+    top: -3.1px;
+    left: 0px;
 }
