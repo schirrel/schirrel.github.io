@@ -1,0 +1,68 @@
+:root {
+  --primary: #5acdfa;
+  --secondary: #f5a8b8;
+  --background: #0f0f0f;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+  background: var(--background);
+  color: white;
+}
+*,
+*:before,
+*:after {
+  transition: all 300ms ease, transform 500ms ease;
+}
+.content {
+  padding: 10px;
+  margin: 20px;
+  min-height: 100%;
+  position: relative;
+  display: block;
+}
+
+section {
+  margin-left: 110px;
+}
+
+article {
+  display: block;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  margin: 20px 30px 20px 20px;
+  padding: 20px;
+}
+article:before,
+article:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border: 1px solid;
+  left: 0;
+  transform: skewY(-1deg);
+}
+article:before {
+  top: 0;
+  border-color: var(--primary);
+  border-bottom: none;
+}
+
+article:after {
+  border-top: none;
+  top: 50%;
+  border-color: var(--secondary);
+}
+
+body.scrolling article:after,
+body.scrolling article:before {
+  transform: skewY(-2deg);
+}
