@@ -80,3 +80,21 @@ ul, ol {
 
   list-style: none;
 }
+
+h4,h5,h6 {
+  margin: 2px 5px;
+}
+
+article ul {
+ padding: 5px;
+ margin:2px;
+ font-size: 14px;
+}
+
+hr {
+
+  border: none;
+  height: 2px;
+  background: linear-gradient(to left, var(--primary), var(--secondary));
+  transform: skewY(1deg);
+}
