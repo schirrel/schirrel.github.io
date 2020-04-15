@@ -1,29 +1,64 @@
-const postsList = document.querySelector("#blog ul");
+import Request from "./Request.js";
+import Content from "./content.js";
 
-const fetchResource = async () => {
-  let posts = await fetch("./assets/blog.json").then(res => res.json());
+const postUrlRegex = new RegExp(/(#blog\?post\=)(.*?)/gm);
+
+const postsList = document.querySelector("#blog ul");
+const post = document.querySelector("#post .content");
+
+const getPosts = async () => {
+  let posts = await Request.get("./assets/blog.json");
   return posts;
 };
 
-const renderPosts = posts => {
-  posts.forEach(post => {
-    let newPost = document.createElement("li");
-    let newPostkLink = document.createElement("a");
-    newPostkLink.href = "#blog?" + post.name.replace(".md", "");
-    newPostkLink.innerText = post.title; //language.name;
-    newPost.appendChild(newPostkLink);
-    postsList.appendChild(newPost);
-    newPostkLink.addEventListener;
-  });
+const getPost = async (fileName) => {
+  let blogPost = await Request.get(`./assets/blog/${fileName}.md`);
+  return await blogPost;
 };
-const Blog = {
-  init: async current => {
-    if (current) {
+const openPost = async (fileName) => {
+  let blogPost = await getPost(fileName);
+  if (blogPost) {
+    Content.setDataSection("post");
+    post.innerText = blogPost;
+  }
+  console.log(blogPost);
+};
+
+const getSelectedPost = (hash) => {
+  return hash.replace(postUrlRegex, `$2`);
+};
+
+const postHandler = async () => {
+  let currentPath = window.location.hash;
+  if (/(#blog)/gm.test(currentPath)) {
+    if (postUrlRegex.test(currentPath)) {
+      openPost(getSelectedPost(currentPath));
     } else {
-      let posts = await fetchResource();
+      let posts = await getPosts();
       renderPosts(posts);
     }
   }
+};
+const watchURL = () => {
+  window.onhashchange = postHandler;
+};
+
+const renderPosts = (posts) => {
+  postsList.innerHTML = "";
+  posts.forEach((post) => {
+    let newPost = document.createElement("li");
+    let newPostkLink = document.createElement("a");
+    newPostkLink.href = "#blog?post=" + post.name.replace(".md", "");
+    newPostkLink.innerText = post.title; //language.name;
+    newPost.appendChild(newPostkLink);
+    postsList.appendChild(newPost);
+  });
+};
+const Blog = {
+  init: async () => {
+    postHandler();
+    watchURL();
+  },
 };
 
 export default Blog;

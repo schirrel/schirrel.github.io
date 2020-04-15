@@ -1,4 +1,6 @@
-const menuItens = Array.from(document.querySelectorAll("aside nav a")).map(
+import Content from './content.js';
+
+const menuItens = Array.from(document.querySelectorAll('aside nav a')).map(
   menu => {
     return {
       element: menu,
@@ -10,14 +12,10 @@ const menuItens = Array.from(document.querySelectorAll("aside nav a")).map(
 );
 
 const addClickListner = event => {
-  menuItens.forEach(item => (item.className = ""));
-  event.target.className = "active";
-  let dataSection = event.target.getAttribute("data-section");
-  if (dataSection) {
-    document.body.setAttribute("data-section", dataSection);
-  } else {
-    document.body.removeAttribute("data-section");
-  }
+  menuItens.forEach(item => (item.className = ''));
+  event.target.className = 'active';
+  let dataSection = event.target.getAttribute('data-section');
+  Content.setDataSection(dataSection);
 };
 
 const callListners = item => {

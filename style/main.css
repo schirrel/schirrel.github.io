@@ -221,3 +221,11 @@ body[data-section] section.active  {
   display: block;
   opacity: 1;
 }
+
+#post .content {
+  padding: 0;
+}
+
+#post > article {
+  padding: 0 !important;
+}

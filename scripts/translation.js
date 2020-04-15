@@ -1,7 +1,8 @@
+import Request from './Request.js';
 const languagesElement = document.querySelector("#languages");
 
-const fetchDictionary = async () => {
-  let dict = await fetch("./assets/dicionario.json").then(res => res.json());
+const getDictionary = async () => {
+  let dict = await Request.get("./assets/dicionario.json");
   return dict;
 };
 
@@ -52,7 +53,7 @@ const renderDictionary = dictionary => {
 };
 const Dictionary = {
   init: async () => {
-    let dictionary = await fetchDictionary();
+    let dictionary = await getDictionary();
     if (dictionary && dictionary.languages) {
       window.dictionary = dictionary;
       renderDictionary(dictionary);

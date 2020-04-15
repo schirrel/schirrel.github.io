@@ -1,47 +1,49 @@
 import Blog from './blog.js';
-let menuItens = null;
+
+
+const setDataSection = (dataSection) => {
+  if (dataSection) {
+    document.body.setAttribute('data-section', dataSection);
+  } else {
+    document.body.removeAttribute('data-section');
+  }
+    validateDataSection();
+};
 
 const validateDataSection = () => {
-    Array.from(document.querySelectorAll('section')).forEach(section=> section.classList.remove('active'))
-    let toShow = document.body.getAttribute('data-section')
-    if (toShow) {
-        setTimeout(() => {
-            document.body.setAttribute('data-section-active', true)
-        }, 300)
-        
-        document.querySelector(`#${toShow}`).classList.add('active');
+  Array.from(document.querySelectorAll('section')).forEach((section) =>
+    section.classList.remove('active')
+  );
+  let toShow = document.body.getAttribute('data-section');
+  if (toShow) {
+    setTimeout(() => {
+      document.body.setAttribute('data-section-active', true);
+    }, 300);
 
-        if (toShow === 'blog') {
-            Blog.init();
-    }
-    } else {
-        document.body.removeAttribute('data-section-active')
-    }
-}
+    document.querySelector(`#${toShow}`).classList.add('active');
 
-const addHandler = (menuItens) => {
-    menuItens.forEach(item => {
-        item.listners.click.push(validateDataSection)
-    });
-}
+    if (toShow === 'blog') {
+      Blog.init();
+    }
+  } else {
+    document.body.removeAttribute('data-section-active');
+  }
+};
+
 
 const validateLocation = () => {
-    let currentPath = window.location.hash;
-    if (currentPath.indexOf('#blog' == 0)) {
-        menuItens[3].element.click();
-        let hasSelected = currentPath.split('?');
-        if(hasSelected.length===2)
-        Blog.init(hasSelected[1]);
-    }
-}
-const contentManager = (menus) => {
-    menuItens = menus;
-    addHandler(menus);
-    validateLocation();
-}
+  let currentPath = window.location.hash;
+  if (currentPath.indexOf('#blog') === 0) {
+      setDataSection('blog');
+  }
+};
+const contentManager = () => {
+  validateLocation();
+};
 
 const Content = {
-    init: contentManager
-}
+    init: contentManager,
+    setDataSection:setDataSection
+};
 
-export default Content
+export default Content;

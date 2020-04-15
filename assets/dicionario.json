@@ -25,7 +25,9 @@
                 "invent":"Desenvolvimento Embarcado",
                 "defiant":"Desenvolvimento de Jogos",
                 "ufms":"Bacharelado em Sistemas de Informação",
-                "nci":"BSc Computing - 3º ano, Ciência Sem Fronteiras"
+                "nci":"BSc Computing - 3º ano, Ciência Sem Fronteiras",
+                "ireland":"Irlanda",
+                "brazil":"Brasil"
             }
         },
         "en": {
@@ -53,7 +55,9 @@
                 "invent":"3D Printer's Firmware Dev",
                 "defiant":"Game Dev",
                 "ufms":"BSc Information Systems",
-                "nci":"BSc Computing - 3th year (Exchange Program)"
+                "nci":"BSc Computing - 3th year (Exchange Program)",
+                "ireland":"Ireland",
+                "brazil":"Brazil"
             }
         }
     }
