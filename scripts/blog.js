@@ -1,5 +1,6 @@
 import Request from "./Request.js";
 import Content from "./content.js";
+import snarkdown from './snarkdown.js';
 
 const postUrlRegex = new RegExp(/(#blog\?post\=)(.*?)/gm);
 
@@ -19,9 +20,8 @@ const openPost = async (fileName) => {
   let blogPost = await getPost(fileName);
   if (blogPost) {
     Content.setDataSection("post");
-    post.innerText = blogPost;
+    post.innerHTML = snarkdown(blogPost);
   }
-  console.log(blogPost);
 };
 
 const getSelectedPost = (hash) => {

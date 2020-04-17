@@ -6,7 +6,7 @@ const getDictionary = async () => {
   return dict;
 };
 
-const currentLanguage = () => window.localStorage.getItem("schirrel-language");
+export const currentLanguage = () => window.localStorage.getItem("schirrel-language") || 'ptBr';
 
 const renderLanguage = (key, language) => {
   let newLanguage = document.createElement("li");

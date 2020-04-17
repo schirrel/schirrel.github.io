@@ -1,0 +1,27 @@
+/* 
+#blog,
+#post {
+  -webkit-transform: translateZ(-200px) translateX(0%) rotateY(45deg);
+    transform: translateZ(-200px) translateX(0%) rotateY(45deg);
+} */
+
+#post .content {
+    padding: 0;
+    /* font-size: 12px; */
+  }
+  
+#post
+{
+  font-size: 12px; 
+} 
+  #post .content ul {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    list-style: circle;
+    padding-left: 20px;
+  }
+
+  #post .content ul li {
+    margin: 5px;
+  }
