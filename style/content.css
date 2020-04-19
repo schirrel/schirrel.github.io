@@ -35,22 +35,27 @@ h1 {
 }
 
 .text-secondary,
-#languages li:nth-child(1n):hover {
-  color: var(--secondary);
+#languages li:nth-child(1n):hover,
+li:nth-child(1n) > a:hover {
+  color: var(--secondary) !important;
 }
 
 .text-secondary:hover,
-#languages li:nth-child(1n):hover {
-  text-shadow: 0px 0px 2px var(--secondary);
+#languages li:nth-child(1n):hover,
+li:nth-child(1n) > a:hover 
+ {
+  text-shadow: 0px 0px 2px var(--secondary) !important;
 }
 .text-primary,
-#languages li:nth-child(2n):hover {
-  color: var(--primary);
+#languages li:nth-child(2n):hover ,
+li:nth-child(2n) > a:hover {
+  color: var(--primary) !important;
 }
 
 .text-primary:hover,
-#languages li:nth-child(2n):hover {
-  text-shadow: 0px 0px 2px var(--primary);
+#languages li:nth-child(2n):hover ,
+li:nth-child(2n) > a:hover {
+  text-shadow: 0px 0px 2px var(--primary) !important;
 }
 
 .smaller {

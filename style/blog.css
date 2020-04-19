@@ -4,7 +4,14 @@
   -webkit-transform: translateZ(-200px) translateX(0%) rotateY(45deg);
     transform: translateZ(-200px) translateX(0%) rotateY(45deg);
 } */
-
+#blog h1 small {
+  font-size: 12px;
+  font-style: italic;
+}
+#blog a, #blog a:link, #blog #blog a:visited, #blog a:active {
+  color: #c5c5c5;
+  text-shadow: 2px 0px 2px #050505;
+}
 #post .content {
     padding: 0;
     /* font-size: 12px; */
