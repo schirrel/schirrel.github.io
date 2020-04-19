@@ -27,7 +27,8 @@
                 "ufms":"Bacharelado em Sistemas de Informação",
                 "nci":"BSc Computing - 3º ano, Ciência Sem Fronteiras",
                 "ireland":"Irlanda",
-                "brazil":"Brasil"
+                "brazil":"Brasil",
+                "blog-description":"Somente em português."
             }
         },
         "en": {
@@ -57,7 +58,8 @@
                 "ufms":"BSc Information Systems",
                 "nci":"BSc Computing - 3th year (Exchange Program)",
                 "ireland":"Ireland",
-                "brazil":"Brazil"
+                "brazil":"Brazil",
+                "blog-description":"Portuguese only"
             }
         }
     }

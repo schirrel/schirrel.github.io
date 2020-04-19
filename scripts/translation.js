@@ -1,4 +1,8 @@
-import Request from './Request.js';
+import Request from "./Request.js";
+
+export const currentLanguage = () =>
+  window.localStorage.getItem("schirrel-language") || "ptBr";
+
 const languagesElement = document.querySelector("#languages");
 
 const getDictionary = async () => {
@@ -6,64 +10,66 @@ const getDictionary = async () => {
   return dict;
 };
 
-export const currentLanguage = () => window.localStorage.getItem("schirrel-language") || 'ptBr';
-
-const renderLanguage = (key, language) => {
+const renderLanguage = (key) => {
   let newLanguage = document.createElement("li");
   newLanguage.setAttribute("data-translation", key);
-  newLanguage.innerText = key; //language.name;
+  newLanguage.innerText = key;
+  newLanguage.onclick = (evt) => {
+    if (evt.target && evt.target.getAttribute("data-translation")) {
+      let language = (window.language = evt.target.getAttribute(
+        "data-translation"
+      ));
+      changeLanguage(language);
+    }
+  };
   languagesElement.appendChild(newLanguage);
 };
 
-const changeLanguage = language => {
+const translateText = (element) => {
+  let selected = window.dictionary.languages[currentLanguage()];
+  element.innerText = selected.dictionary[element.getAttribute("data-i18n")];
+};
+const translateAttrText = (element, attr) => {
+  let selected = window.dictionary.languages[currentLanguage()];
+
+  if (element.hasAttribute(attr)) {
+    element.setAttribute(
+      attr,
+      selected.dictionary[element.getAttribute("data-i18n")]
+    );
+  }
+};
+const changeLanguage = (language) => {
+  window.localStorage.setItem("schirrel-language", language);
   let toTranslate = document.querySelectorAll("[data-i18n]");
 
-  let selected = window.dictionary.languages[language];
-  for (let t = 0; t < toTranslate.length; t++) {
-    toTranslate[t].innerText =
-      selected.dictionary[toTranslate[t].getAttribute("data-i18n")];
-    if (toTranslate[t].hasAttribute("data-text")) {
-      toTranslate[t].setAttribute(
-        "data-text",
-        selected.dictionary[toTranslate[t].getAttribute("data-i18n")]
-      );
-    }
-  }
-
-  window.localStorage.setItem("schirrel-language", language);
+  Array.from(toTranslate).forEach((translateIt) => {
+    translateText(translateIt);
+    translateAttrText(translateIt, "data-text");
+  });
 };
 
-const renderDictionary = dictionary => {
+const renderDictionary = (dictionary) => {
   for (var l in dictionary.languages) {
-    renderLanguage(l, dictionary.languages[l]);
-  }
-
-  let languages = document.querySelectorAll("[data-translation]");
-
-  for (let i = 0; i < languages.length; i++) {
-    languages[i].onclick = evt => {
-      if (evt.target && evt.target.getAttribute("data-translation")) {
-        let language = (window.language = evt.target.getAttribute(
-          "data-translation"
-        ));
-        changeLanguage(language);
-      }
-    };
+    renderLanguage(l);
   }
 };
-const Dictionary = {
-  init: async () => {
-    let dictionary = await getDictionary();
-    if (dictionary && dictionary.languages) {
-      window.dictionary = dictionary;
-      renderDictionary(dictionary);
-    }
 
-    if (window.dictionary && currentLanguage()) {
-      changeLanguage(currentLanguage());
-    }
-    },
-    current: currentLanguage
+const initDictionary = async () => {
+  let dictionary = await getDictionary();
+  if (dictionary && dictionary.languages) {
+    window.dictionary = dictionary;
+    renderDictionary(dictionary);
+  }
+
+  if (window.dictionary && currentLanguage()) {
+    changeLanguage(currentLanguage());
+  }
+};
+
+const Dictionary = {
+  init: initDictionary,
+  current: currentLanguage,
 };
 
 export default Dictionary;
