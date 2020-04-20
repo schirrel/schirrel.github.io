@@ -8,6 +8,7 @@ html {
   scroll-padding-top: 30vh;
   background: var(--background);
   color: white;
+  font-family: 'Manrope', sans-serif;
 }
 body[data-section] {
   min-height: auto;
