@@ -1,7 +1,11 @@
 [
     {
         "name":"new.md",
-        "title":"Boas vindas terraqueo"
+        "title":"Boas vindas Terráqueo"
+    },
+    {
+        "name":"blog.md",
+        "title":"Manhê eu fiz um blog"
     }
 ]
 

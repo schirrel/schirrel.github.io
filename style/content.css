@@ -88,12 +88,16 @@ article:hover {
   box-shadow: 0px 0px 20px #000000;
 }
 article:hover:before,
-article:hover:after {
+article:hover:after,
+#blog li:hover:before,
+#blog li:hover:after {
   transform: skewY(0deg);
   border-color: white;
 }
 article:before,
-article:after {
+article:after,
+#blog li:before,
+#blog li:after   {
   content: "";
   display: block;
   position: absolute;
@@ -104,13 +108,15 @@ article:after {
   transform: skewY(-1deg);
   z-index: 1;
 }
-article:before {
+article:before,
+#blog li:before {
   top: 0;
   border-color: var(--primary);
   border-bottom: none;
 }
 
-article:after {
+article:after,
+#blog li:after {
   border-top: none;
   top: 50%;
   border-color: var(--secondary);

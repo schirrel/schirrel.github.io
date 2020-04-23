@@ -32,3 +32,34 @@
   #post .content ul li {
     margin: 5px;
   }
+
+#post .voltar {
+  margin: 5px;
+  display: block;
+  pointer-events: all;
+  cursor: pointer;
+  z-index: 999999999999;
+  font-size: 28px;
+  border: 2px solid transparent;
+  width: 20px;
+  padding: 5px;
+}
+
+
+#post .voltar:hover {
+  border-color: var(--secondary);
+}
+
+#blog li {
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+}
+
+#blog li a {
+  z-index: 20
+}
+#blog li::after,
+#blog li::before {
+  z-index: -1;
+}

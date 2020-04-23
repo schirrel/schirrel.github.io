@@ -1,5 +1,5 @@
 
-# Boas vindas terraqueo
+# Boas vindas Terráqueo
 
 Depois de um bom tempo, site de cara nova!
 

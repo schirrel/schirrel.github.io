@@ -9,6 +9,7 @@ const setDataSection = (dataSection) => {
   }
     validateDataSection();
 };
+const getDataSection = () =>   document.body.getAttribute('data-section');
 
 const validateDataSection = () => {
   Array.from(document.querySelectorAll('section')).forEach((section) =>
@@ -43,7 +44,8 @@ const contentManager = () => {
 
 const Content = {
     init: contentManager,
-    setDataSection:setDataSection
+    setDataSection:setDataSection,
+    getDataSection:getDataSection
 };
 
 export default Content;

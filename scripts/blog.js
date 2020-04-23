@@ -3,15 +3,13 @@ import Content from "./content.js";
 import snarkdown from './snarkdown.js';
 
 const postUrlRegex = new RegExp(/(#blog\?post\=)(.*?)/gm);
-
 const postsList = document.querySelector("#blog ul");
-const post = document.querySelector("#post .content");
+const post = document.querySelector("#post .post-content");
 
 const getPosts = async () => {
   let posts = await Request.get("./assets/blog.json");
   return posts;
 };
-
 const getPost = async (fileName) => {
   let blogPost = await Request.get(`./assets/blog/${fileName}.md`);
   return await blogPost;
@@ -23,11 +21,9 @@ const openPost = async (fileName) => {
     post.innerHTML = snarkdown(blogPost);
   }
 };
-
 const getSelectedPost = (hash) => {
   return hash.replace(postUrlRegex, `$2`);
 };
-
 const postHandler = async () => {
   let currentPath = window.location.hash;
   if (/(#blog)/gm.test(currentPath)) {
@@ -36,13 +32,15 @@ const postHandler = async () => {
     } else {
       let posts = await getPosts();
       renderPosts(posts);
+      if(Content.getDataSection() !== 'blog') {
+      Content.setDataSection("blog");
+      }
     }
   }
 };
 const watchURL = () => {
   window.onhashchange = postHandler;
 };
-
 const renderPosts = (posts) => {
   postsList.innerHTML = "";
   posts.forEach((post) => {
@@ -60,5 +58,4 @@ const Blog = {
     watchURL();
   },
 };
-
 export default Blog;
