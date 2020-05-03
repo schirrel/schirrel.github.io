@@ -1,165 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/main.css" />
-    <title>Alan Balen Schio</title>
-  </head>
-  <body>
-      <aside>
-        <div class="me">
-          <div class="img-wraper">
-            <img src="assets/alan.jpg" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/main.css" />
+  <title>Alan Balen Schio</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398750-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165398750-1');
+  </script>
+
+</head>
+
+<body>
+  <aside>
+    <div class="me">
+      <div class="img-wraper">
+        <img src="assets/alan.jpg" />
+      </div>
+    </div>
+    <div class="translations">
+      <ul id="languages"></ul>
+    </div>
+    <nav>
+      <a href="#about" data-i18n="about" data-text="Sobre">Sobre</a>
+      <a href="#xp" data-i18n="xp" data-text="Experiência">Experiência</a>
+      <a href="#skils" data-i18n="skils" data-text="Habilidades">Habilidades</a>
+      <a data-section="blog" href="#blog" data-text="Blog">Blog</a>
+      <a href="#contact" data-i18n="contact" data-text="Contato">Contato</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="site">
+      <article id="about">
+        <div class="content">
+          <h1 data-i18n="me">Oi, eu sou o Alan.</h1>
+
+          <h4 data-i18n="resume">Sou Desenvolvedor Front End focado em criação de interfaçes e componentes.</h4>
+          <p>
+            <span data-i18n="description-start">Sou um apaixonado por </span>
+            <em data-i18n="description-pretty-screens" class="text-primary">telas bonitas</em>,
+            <span data-i18n="description-middle">por isso meus estudos são focados e minhas habilidades principais são
+              HTML, CSS, SVG e JavaScript</span> <b data-i18n="description-vanilla-js">puro</b>,
+            <span data-i18n="description-end">assim consigo utilizar meus conhecimentos independente de
+              framework.</span>
+
+          </p>
+
+          <h5 class="text-primary" data-i18n="kiss"></h5>
+          <br />
+          <small> <a class="text-secondary" href="./resume.html">Resumé</a></small>
+        </div>
+      </article>
+
+      <article id="xp">
+        <h1 data-i18n="xp">Experiência</h1>
+        <div class="content">
+          <ol>
+            <li data-prefix="2020 - 2016">
+              <h6>
+                <span data-i18n="jmj">Desenvolvimento Full Stack com foco em Font End</span> <br />
+                <small>JMJ Sistemas e Consultoria - Sinop (<span data-i18n="brazil">Brasil</span>)</small>
+              </h6>
+            </li>
+
+            <li data-prefix="2016">
+              <h6>
+                <span data-i18n="invent">Desenvolvimento Embarcado</span> {<span data-i18n="internship">Estágio</span>}
+                <br />
+                <small>Invent Robotics - BH (<span data-i18n="brazil">Brasil</span>)</small>
+              </h6>
+            </li>
+            <li data-prefix="2015">
+              <h6>
+                <span data-i18n="defiant">Desenvolvimento de Jogos</span> {<span data-i18n="internship">Estágio</span>}
+                <br />
+                <small>Defiant Games - Dublin (<span data-i18n="ireland">Irlanda</span>)</small>
+              </h6>
+            </li>
+            <li data-prefix="2015 - 2014">
+              <h6>
+                <span data-i18n="nci">BSc Computing - 3th Year</span>
+                <br />
+                <small>National College of Ireland</small>
+              </h6>
+            </li>
+            <li data-prefix="2016 - 2011">
+              <h6>
+                <span data-i18n="ufms">Graduação em Sistemas de Informação</span>
+                <br />
+                <small>UFMS</small>
+              </h6>
+            </li>
+          </ol>
+
+
+        </div>
+      </article>
+
+      <article id="skils">
+        <div class="content">
+          <h1 data-i18n="skils">Habilidades</h1>
+          <h4 data-i18n="main">Principais</h4>
+          <ul>
+            <li>VueJs || AngularJS; </li>
+            <li>JavaScript Vanilla; </li>
+            <li>CSS; </li>
+            <li><span data-i18n="svganimation">Animações de SVG</span>;</li>
+            <li>Java, JavaEE, Spring Boot; </li>
+            <li>UI/UX.</li>
+          </ul>
+          <hr />
+          <h4 data-i18n="canwork">Conseguiria trabalhar com</h4>
+          <ul>
+            <li>React || Angular >= 2; </li>
+            <li>NodeJS; </li>
+            <li>Ionic || Cordova; </li>
+            <li>C# || C++; </li>
+            <li>PHP; </li>
+            <li>Vraptor (Java). </li>
+          </ul>
+
+          <hr />
+          <h4 data-i18n="wanttowork">Gostaria de trabalhar com</h4>
+          <ul>
+            <li>Web Components;</li>
+            <li data-i18n="componentization">Componentização;</li>
+            <li>Design System;</li>
+            <li>OpenSource.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="contact">
+        <div class="content horizontal-no-padding">
+          <h1 data-i18n="contact">Contato</h1>
+          <a href="http://codepen.com/schirrel" data-text="CodePen"> CodePen </a>
+          <a href="http://github.com/schirrel" data-text="GitHub"> GitHub </a>
+          <a href="https://www.linkedin.com/in/alanschio/" data-text="LinkedIn"> LinkedIn </a>
+          <a href="mailto:alanbschio@gmail.com" data-text="E-mail "> E-mail </a>
+
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="blog" hidden>
+      <article>
+        <div class="content">
+          <h1>Blog <small data-i18n="blog-description">Somente em português.</small></h1>
+          <div class="content">
+
+            <ul></ul>
           </div>
         </div>
-        <div class="translations">
-          <ul id="languages"></ul>
+      </article>
+    </section>
+    <section id="post" hidden>
+      <article>
+        <div class="content">
+          <a class="voltar" href="#blog">
+            < </a>
+              <div class="post-content">
+              </div>
         </div>
-        <nav>
-          <a href="#about" data-i18n="about" data-text="Sobre">Sobre</a>
-          <a href="#xp" data-i18n="xp" data-text="Experiência">Experiência</a>
-          <a href="#skils" data-i18n="skils" data-text="Habilidades"
-            >Habilidades</a>
-            <a data-section="blog" href="#blog" data-text="Blog">Blog</a>
-          <a href="#contact" data-i18n="contact" data-text="Contato">Contato</a>
-        </nav>
-      </aside>
-      <main>
-      <section id="site">
-        <article id="about">
-          <div class="content">
-            <h1 data-i18n="me">Oi, eu sou o Alan.</h1>
-            
-           <h4 data-i18n="resume">Sou Desenvolvedor Front End focado em criação de interfaçes e componentes.</h4>
-            <p >
-              <span data-i18n="description-start">Sou um apaixonado por </span>
-              <em  data-i18n="description-pretty-screens" class="text-primary">telas bonitas</em>,
-            <span  data-i18n="description-middle">por isso meus estudos são focados e minhas habilidades principais são HTML, CSS, SVG e JavaScript</span> <b  data-i18n="description-vanilla-js">puro</b>,
-          <span  data-i18n="description-end">assim consigo utilizar meus conhecimentos independente de framework.</span>
-          
-        </p>
-  
-        <h5 class="text-primary" data-i18n="kiss"></h5>
-<br/>
-       <small> <a class="text-secondary" href="./resume.html">Resumé</a></small>
-          </div>
-        </article>
+      </article>
+    </section>
+  </main>
 
-        <article id="xp">
-          <h1 data-i18n="xp">Experiência</h1>
-          <div class="content">
-            <ol>
-              <li data-prefix="2020 - 2016">
-                <h6>
-                  <span data-i18n="jmj">Desenvolvimento Full Stack com foco em Font End</span> <br />
-                  <small>JMJ Sistemas e Consultoria - Sinop (<span data-i18n="brazil">Brasil</span>)</small>
-                </h6>
-              </li>
+  <script type="module" src="magica.js"></script>
+</body>
 
-              <li data-prefix="2016">
-                <h6>
-                  <span data-i18n="invent">Desenvolvimento Embarcado</span> {<span data-i18n="internship">Estágio</span>}
-                  <br />
-                  <small>Invent Robotics - BH (<span data-i18n="brazil">Brasil</span>)</small>
-                </h6>
-              </li>
-              <li data-prefix="2015">
-                <h6>
-                  <span data-i18n="defiant">Desenvolvimento de Jogos</span> {<span data-i18n="internship">Estágio</span>}
-                  <br />
-                  <small>Defiant Games - Dublin (<span data-i18n="ireland">Irlanda</span>)</small>
-                </h6>
-              </li>
-              <li data-prefix="2015 - 2014">
-                <h6>
-                  <span data-i18n="nci">BSc Computing - 3th Year</span>
-                  <br />
-                  <small>National College of Ireland</small>
-                </h6>
-              </li>
-              <li data-prefix="2016 - 2011">
-                <h6>
-                  <span data-i18n="ufms">Graduação em Sistemas de Informação</span>
-                  <br />
-                  <small>UFMS</small>
-                </h6>
-              </li>
-            </ol>
-
-
-          </div>
-        </article>
-
-        <article id="skils">
-          <div class="content">
-            <h1 data-i18n="skils">Habilidades</h1>
-            <h4 data-i18n="main">Principais</h4>
-            <ul>
-              <li>VueJs || AngularJS; </li>
-              <li>JavaScript Vanilla; </li>
-              <li>CSS; </li>
-              <li><span  data-i18n="svganimation">Animações de SVG</span>;</li>
-              <li>Java, JavaEE, Spring Boot; </li>
-              <li>UI/UX.</li>
-            </ul>
-            <hr />
-            <h4 data-i18n="canwork">Conseguiria trabalhar com</h4>
-            <ul>
-              <li>React || Angular >= 2; </li>
-              <li>NodeJS; </li>
-              <li>Ionic || Cordova; </li>
-              <li>C# || C++; </li>
-              <li>PHP; </li>
-              <li>Vraptor (Java). </li>
-            </ul>
-
-            <hr />
-            <h4 data-i18n="wanttowork">Gostaria de trabalhar com</h4>
-            <ul>
-              <li>Web Components;</li>
-              <li data-i18n="componentization">Componentização;</li>
-              <li>Design System;</li>
-              <li>OpenSource.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article id="contact">
-          <div class="content horizontal-no-padding">
-            <h1 data-i18n="contact">Contato</h1>
-              <a href="http://codepen.com/schirrel" data-text="CodePen"> CodePen </a>
-              <a href="http://github.com/schirrel" data-text="GitHub"> GitHub </a>
-              <a href="https://www.linkedin.com/in/alanschio/"  data-text="LinkedIn"> LinkedIn </a>
-              <a href="mailto:alanbschio@gmail.com"  data-text="E-mail "> E-mail </a>
-
-              </a>
-            </div>
-        </article>
-      </section>
-      
-      <section id="blog" hidden> 
-        <article>
-          <div class="content">
-            <h1>Blog <small data-i18n="blog-description">Somente em português.</small></h1>
-            <div class="content">
-              
-              <ul></ul>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section id="post" hidden> 
-        <article>
-          <div class="content">
-            <a class="voltar" href="#blog"> <  </a>
-            <div class="post-content">
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <script type="module" src="magica.js"></script>
-  </body>
 </html>
