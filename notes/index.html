@@ -1,0 +1,40 @@
+<html lang="en" class="js-focus-visible" data-js-focus-visible="">
+  <head>
+    <title>Browser Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "IBM Plex Sans Arabic", sans-serif;
+      }
+      textarea {
+        min-height: 100%;
+        width: 100%;
+        padding: 20px;
+        color: black;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea> </textarea>
+
+    <script>
+      const ta = document.querySelector("textarea");
+
+      ta.value = localStorage.getItem("browser-notas");
+
+      ta.addEventListener(
+        "input",
+        function () {
+          localStorage.setItem("browser-notas", ta.value);
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
