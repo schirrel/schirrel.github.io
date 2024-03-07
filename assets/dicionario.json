@@ -29,7 +29,9 @@
                 "nci":"BSc Computing - 3º ano, Ciência Sem Fronteiras",
                 "ireland":"Irlanda",
                 "brazil":"Brasil",
-                "blog-description":"Somente em português."
+                "blog-description":"Somente em português.",
+                "usa": "EUA",
+                "mestrado": "Mestrado em Computação Aplicada - Microfrontends"
             }
         },
         "en": {
@@ -62,7 +64,8 @@
                 "ireland":"Ireland",
                 "brazil":"Brazil",
                 "usa": "USA",
-                "blog-description":"Portuguese only"
+                "blog-description":"Portuguese only",
+                "mestrado": "Master in Applied Computing -  Microfrontends"
             }
         }
     }
