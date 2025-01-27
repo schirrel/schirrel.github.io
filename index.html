@@ -1,109 +1,744 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style/main.css" />
-  <title>Alan Balen Schio</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398750-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit&display=swap"
+        rel="stylesheet">
+    </script>
+    <style type="text/css">
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
 
-    gtag('config', 'UA-165398750-1');
-  </script>
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
 
+        /*
+    ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+    */
+        /*
+    1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+    2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+    */
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            /* 1 */
+            border-width: 0;
+            /* 2 */
+            border-style: solid;
+            /* 2 */
+            border-color: #e5e7eb;
+            /* 2 */
+        }
+
+        ::before,
+        ::after {
+            --tw-content: '';
+        }
+
+        /*
+    1. Use a consistent sensible line-height in all browsers.
+    2. Prevent adjustments of font size after orientation changes in iOS.
+    3. Use a more readable tab size.
+    4. Use the user's configured `sans` font-family by default.
+    5. Use the user's configured `sans` font-feature-settings by default.
+    6. Use the user's configured `sans` font-variation-settings by default.
+    7. Disable tap highlights on iOS
+    */
+
+        html,
+        :host {
+            line-height: 1.5;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+            /* 3 */
+            tab-size: 4;
+            /* 3 */
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /* 4 */
+            font-feature-settings: normal;
+            /* 5 */
+            font-variation-settings: normal;
+            /* 6 */
+            -webkit-tap-highlight-color: transparent;
+            /* 7 */
+        }
+
+        /*
+    1. Remove the margin in all browsers.
+    2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+    */
+
+        body {
+            margin: 0;
+            /* 1 */
+            line-height: inherit;
+            /* 2 */
+        }
+
+        /*
+    1. Add the correct height in Firefox.
+    2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+    3. Ensure horizontal rules are visible by default.
+    */
+
+        hr {
+            height: 0;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            border-top-width: 1px;
+            /* 3 */
+        }
+
+        /*
+    Add the correct text decoration in Chrome, Edge, and Safari.
+    */
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        /*
+    Remove the default font size and weight for headings.
+    */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        /*
+    Reset links to optimize for opt-in styling instead of opt-out.
+    */
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        /*
+    Add the correct font weight in Edge and Safari.
+    */
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /*
+    1. Use the user's configured `mono` font-family by default.
+    2. Use the user's configured `mono` font-feature-settings by default.
+    3. Use the user's configured `mono` font-variation-settings by default.
+    4. Correct the odd `em` font sizing in all browsers.
+    */
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            /* 1 */
+            font-feature-settings: normal;
+            /* 2 */
+            font-variation-settings: normal;
+            /* 3 */
+            font-size: 1em;
+            /* 4 */
+        }
+
+        /*
+    Add the correct font size in all browsers.
+    */
+
+        small {
+            font-size: 80%;
+        }
+
+        /*
+    Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+    */
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /*
+    1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+    2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+    3. Remove gaps between table borders by default.
+    */
+
+        table {
+            text-indent: 0;
+            /* 1 */
+            border-color: inherit;
+            /* 2 */
+            border-collapse: collapse;
+            /* 3 */
+        }
+
+        /*
+    1. Change the font styles in all browsers.
+    2. Remove the margin in Firefox and Safari.
+    3. Remove default padding in all browsers.
+    */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-feature-settings: inherit;
+            /* 1 */
+            font-variation-settings: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            font-weight: inherit;
+            /* 1 */
+            line-height: inherit;
+            /* 1 */
+            letter-spacing: inherit;
+            /* 1 */
+            color: inherit;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+            padding: 0;
+            /* 3 */
+        }
+
+        /*
+    Remove the inheritance of text transform in Edge and Firefox.
+    */
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        /*
+    1. Correct the inability to style clickable types in iOS and Safari.
+    2. Remove default button styles.
+    */
+
+        button,
+        input:where([type='button']),
+        input:where([type='reset']),
+        input:where([type='submit']) {
+            -webkit-appearance: button;
+            /* 1 */
+            background-color: transparent;
+            /* 2 */
+            background-image: none;
+            /* 2 */
+        }
+
+        /*
+    Use the modern Firefox focus style for all focusable elements.
+    */
+
+        :-moz-focusring {
+            outline: auto;
+        }
+
+        /*
+    Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+    */
+
+        :-moz-ui-invalid {
+            box-shadow: none;
+        }
+
+        /*
+    Add the correct vertical alignment in Chrome and Firefox.
+    */
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /*
+    Correct the cursor style of increment and decrement buttons in Safari.
+    */
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /*
+    1. Correct the odd appearance in Chrome and Safari.
+    2. Correct the outline style in Safari.
+    */
+
+        [type='search'] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /*
+    Remove the inner padding in Chrome and Safari on macOS.
+    */
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /*
+    1. Correct the inability to style clickable types in iOS and Safari.
+    2. Change font properties to `inherit` in Safari.
+    */
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /*
+    Add the correct display in Chrome and Safari.
+    */
+
+        summary {
+            display: list-item;
+        }
+
+        /*
+    Removes the default spacing and border for appropriate elements.
+    */
+
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            padding: 0;
+        }
+
+        ol,
+        ul,
+        menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+    Reset default styling for dialogs.
+    */
+        dialog {
+            padding: 0;
+        }
+
+        /*
+    Prevent resizing textareas horizontally by default.
+    */
+
+        textarea {
+            resize: vertical;
+        }
+
+        /*
+    1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+    2. Set the default placeholder color to the user's configured gray 400 color.
+    */
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
+
+        /*
+    Set the default cursor for buttons.
+    */
+
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        /*
+    Make sure disabled buttons don't get the pointer cursor.
+    */
+        :disabled {
+            cursor: default;
+        }
+
+        /*
+    1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+    2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+       This can trigger a poorly considered lint error in some tools but is included by design.
+    */
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            /* 1 */
+            vertical-align: middle;
+            /* 2 */
+        }
+
+        /*
+    Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+    */
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Make elements with the HTML hidden attribute stay hidden by default */
+        [hidden]:where(:not([hidden="until-found"])) {
+            display: none;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .mt-10 {
+            margin-top: 2.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        .rounded-3xl {
+            border-radius: 1.5rem;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-white {
+            --tw-border-opacity: 1;
+            border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+        }
+
+        .p-2 {
+            padding: 0.5rem;
+        }
+
+        .px-1 {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+
+        .transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .hover\:bg-zinc-100:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+        }
+    </style>
+    <style type="text/css">
+        body,
+        html {
+            background: #e9d000;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        .logo-wrapper[data-v-da795a06] {
+            width: 100vw;
+            display: flex;
+            height: 80px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        svg[data-v-da795a06] {
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+    <style type="text/css">
+        main[data-v-02281a80],
+        section[data-v-02281a80] {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        main[data-v-02281a80]::before {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            height: 80%;
+            width: 100%;
+            opacity: 0.3;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-image: url("profile-mobile.png");
+            background-size: contain;
+        }
+
+        @media screen and (min-width: 991px) {
+            main[data-v-02281a80]::before {
+                top: 0;
+                bottom: unset;
+                height: 100vh;
+                width: 100vw;
+                min-height: 100vh;
+                min-width: 100vw;
+                background-position: top left;
+                background-image: url("profile.png");
+                background-size: unset;
+            }
+        }
+
+        .font-mulish[data-v-02281a80] {
+            font-family: "Mulish";
+        }
+
+        .font-outfit[data-v-02281a80] {
+            font-family: "Outfit";
+        }
+    </style>
 </head>
 
-<body>
-  <aside>
-    <div class="translations">
-      <ul id="languages"></ul>
-    </div>
-    <nav>
-      <a href="#xp" data-i18n="xp" data-text="Experiência">Experiência</a>
-      <a href="#contact" data-i18n="contact" data-text="Contato">Contato</a>
-    </nav>
-  </aside>
-  <main>
-    <section id="site">
-      <article id="xp">
-        <h1 data-i18n="xp">Experiência</h1>
-        <div class="content">
-          <ol>
-            <li data-prefix="2023">
-              <h6>
-                <span>Software Engineer</span> <br />
-                <small>BairesDev - Lulus.com (<span data-i18n="usa">Estados Unidos</span>)</small>
-              </h6>
-            </li>
-            <li data-prefix="2021 - 2023">
-              <h6>
-                <span data-i18n="mestrado">Mestrado em Computação Aplicada - Microfrontends</span>
-                <br />
-                <small>UFMS</small>
-              </h6>
-            </li>
-            <li data-prefix="2021 - 2023">
-              <h6>
-                <span data-i18n="jsm">Font End Software Engineer (Vue.js)</span> <br />
-                <small>Juntos Somos Mais (<span data-i18n="brazil">Brasil</span>)</small>
-              </h6>
-            </li>
-            <li data-prefix="2020 - 2016">
-              <h6>
-                <span data-i18n="jmj">Desenvolvimento Full Stack com foco em Font End</span> <br />
-                <small>JMJ Sistemas e Consultoria - Sinop (<span data-i18n="brazil">Brasil</span>)</small>
-              </h6>
-            </li>
+<body class="p-2">
+    <main data-v-02281a80="">
+        <div data-v-da795a06="" data-v-02281a80="" class="logo-wrapper"><svg data-v-da795a06=""
+                xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+                height="512" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="">
+                <g data-v-da795a06="" transform="matrix(0.7,0,0,0.7,77.17910728454592,76.85356492996218)">
+                    <path data-v-da795a06=""
+                        d="M507.62 290.14c-1.94-4.91-3.88-9.82-5.88-14.71l-5.89-14.55c-3.9-9.71-7.98-19.35-11.96-29.03a11.39 11.39 0 0 0-4.2-5.35c-8.85-6-22.42-15.55-31.25-21.36-7.46-5.16-17.39-11.62-25.95-17.3-1.71-5.63-3.43-11.24-5.15-16.82a3729.98 3729.98 0 0 0-14.59-46.08c-3.19-9.64-17.04-9.2-19.57.71-8.8 36.71-17.16 73.52-23.83 110.69-9.3 10.99-18.48 22.09-27.44 33.37-20.96-4.97-41.97-9.62-62.92-13.79 7.81-14.45 15.48-28.73 22.84-42.52l15.06-28.28c2.13-4.03 1.74-9.14-1.4-12.81-23.22-27.14-51.85-60.62-75.26-87.35-8.39-9.64-16.75-19.31-25.2-28.9-1.35-1.57-3.11-2.79-5.19-3.54-36.72-13.12-80.55-28.57-117.41-41.31-4.93-1.84-10.67-.11-13.69 4.48-13.7 20.75-32.28 49.27-45.8 70.13L7.79 109.29c-2.15 3.06-2.42 7.22-.3 10.6 6.93 11.18 21.14 33.67 28.14 44.79 7.16 11.36 21.48 33.71 28.71 45.03a6.56 6.56 0 0 0 6.87 2.87l24.77-5.25c16.51-3.54 33-7.17 49.48-10.85 4.76-1.09 9.52-2.17 14.27-3.25-3.31 13.58-6.56 27.15-9.73 40.65-13.29 56.47-26.15 114.35-38.14 171.16-.7 3.4.02 7.14 2.3 10.1l15.69 20.58c7.83 10.25 23.74 30.74 31.6 40.98l15.89 20.42c2.2 2.93 5.69 4.8 9.62 4.75 47.91-.56 100.81-1.34 148.42-2.89 12.72-.36 37.45-1.29 50.18-1.75 8.03-.38 9.75-11.38 2.39-14.28-21.85-8.52-45.72-17.6-67.85-25.26a2.42 2.42 0 0 0-2.87 1.08c-.67 1.16-.28 2.64.88 3.32 5.23 3.04 10.53 5.93 15.79 8.9l15.9 8.66c.87.47 1.77.96 2.69 1.46-41.82-1.38-85.64-2.38-128.31-3 11.42-1.98 22.78-4.28 34.13-6.72 11.17-2.39 23.59-5.41 34.68-8.2l6.89-1.8c6.23-1.64 10.08-7.95 8.62-14.27l-.11-.49-1.56-6.74c-2.47-10.41-5.74-23.1-8.47-33.52-.8-2.95-1.61-5.91-2.44-8.89 7.61-3.29 15.19-6.65 22.75-10.07 4.91 2.29 9.87 4.34 14.9 6.35 19.19 7.52 38.95 13.62 58.86 18.77 8.9 2.29 17.85 4.39 26.83 6.33 3.94.82 8.2-.31 11.26-3.36a619.53 619.53 0 0 0 20.32-21.31c5.38-4.92 4.82-13.83-1.43-17.74-5-3.18-10.05-6.28-15.16-9.3-11.33-6.65-22.79-13.03-34.68-18.61C410 343.3 420.4 338 430.76 332.69l18.2-9.49c.82-.24 1.6-.56 2.32-.95 16.26-5.13 32.48-10.4 48.66-15.76 6.77-2.21 10.32-9.76 7.68-16.35zm-134.16-72.95c6.36-17.27 12.45-34.64 18.33-52.07 2.24 8.65 4.53 17.32 6.85 25.99-8.07 9.08-16.12 18.19-24.05 27.4-.95 1.1-1.9 2.21-2.85 3.31.57-1.54 1.15-3.08 1.72-4.63zm-20.12 42.2c17.32-15.3 34.3-30.96 51.09-46.82 5.2 19.02 10.52 37.96 15.93 56.62 2.11 7.31 4.7 16.19 7.29 24.97-1.55-.42-2.53-.69-2.53-.69-28.27-7.57-56.94-15.04-85.72-21.96 4.69-4.02 9.34-8.04 13.94-12.12zM179.59 114.28l-12.95-5.27 19.54-19.54c-2.27 8.52-4.52 17.07-6.59 24.81zm-73.64-69.35L77.97 72.91l-6.93-2.82L98.83 42.3c2.36.87 4.74 1.75 7.12 2.63zm5.16 1.9c2.43.9 4.82 1.77 7.13 2.62L89.92 77.77l-6.93-2.82zm12.3 4.52c2.58.94 4.98 1.82 7.14 2.6l-28.69 28.69-6.93-2.82zm12.34 4.48c2.17.79 4.58 1.67 7.15 2.6l-29.08 29.08-6.93-2.82zm12.33 4.49c2.31.84 4.71 1.71 7.14 2.6l-29.45 29.45-6.93-2.82zm12.33 4.48c2.39.87 4.78 1.74 7.15 2.6l-29.84 29.84-6.93-2.82zm12.33 4.48c2.47.89 4.87 1.76 7.16 2.59l-30.23 30.23-6.93-2.82zm12.36 4.47c1.14.41 2.24.8 3.28 1.18.44.51.88 1.01 1.33 1.52-.3 1.11-.61 2.23-.92 3.36l-27.17 27.17-6.93-2.82zM82.94 36.42c3.32 1.23 6.95 2.57 10.73 3.97L66.02 68.04l-3.95-1.61c7.14-10.22 14.18-20.34 20.87-30.01zm36.1 155.82c-13.13 1.65-30.95 4.06-45.24 6.01-14.45-26.31-31.24-56.53-46.09-82.84 10-14.17 20.77-29.51 31.43-44.77l119.17 48.52c-5.8 22.45-11.51 45.15-17.05 67.83-14.09 1.65-28.16 3.43-42.22 5.25zm69.47-64.2 41.89 51.18c5.11 6.24 6.19 14.98 2.76 22.28l-31.01 65.98a22.9 22.9 0 0 0-.17 19.11l8.2 18.3c.42.93 1.33 1.48 2.28 1.48a2.499 2.499 0 0 0 2.28-3.52l-8.2-18.3a17.883 17.883 0 0 1 .13-14.94l31.01-65.98c4.24-9.03 2.9-19.85-3.42-27.57l-44.7-54.62a3924.7 3924.7 0 0 0 5.84-38.46c28.32 32.4 58.55 66.71 87.14 98.69-4.23 8.49-10.69 21.44-10.69 21.44-22.87 46-48.05 97.65-70.1 144.06-8.73 18.44-17.44 36.88-25.98 55.41-11.53.51-25.76 1.15-38.38 1.82 2.35-11.44 5.79-28.2 7.55-37.24 15.79-79.35 30.88-159.12 43.57-239.12zm3.15 347.82c-15.63-20.74-33.2-43.92-49.27-64.85 12.55.64 26.04 1.24 36.74 1.71 1.72.07 3.43-.79 4.34-2.39 10.72-18.67 21.23-37.46 31.72-56.24 4.11-7.37 8.28-14.9 12.49-22.53.62.34 1.23.68 1.85 1.02 2.98 1.62 9.11 4.86 12.12 6.4 6.47 3.3 12.98 6.5 19.54 9.61 5.23 30.28 12.09 60.99 19.88 90.67.16.63.36 1.38.57 2.2-5.2 1.67-11.05 3.56-15.61 5.12-25.21 8.58-50.26 17.81-74.37 29.28zm86.64-135.77c-.77-2.94-2.52-5.5-5.71-6.36-4.39-1.2-8.76-2.43-13.18-3.56-8.98-2.33-18.16-4.59-27.36-6.52 11.12-20.19 22.46-40.96 33.57-61.49 27.37 10.88 55.08 20.77 82.89 30.4 19.8 6.83 46.67 15.69 67.24 22.28-41.18 24.05-82.28 48.78-121.86 75.43-4.78-16.87-10.01-33.9-15.59-50.18zm117.5 19.83c8.43 8.43 17.29 16.45 26.37 24.15.9.77 1.82 1.52 2.73 2.28-2.36 2.19-4.7 4.39-7.02 6.61-28-6.07-56.41-10.59-85.07-12.06 19.06-8.83 37.97-18.02 56.77-27.39 2.04 2.19 4.12 4.31 6.22 6.41zm57.88-63.95c-6.76-24.65-13.85-49.66-21.14-74.48 10.11 7.64 20.28 15.24 30.1 22.5 5.48 14.18 11.17 28.79 16.88 43.07-4.24 1.43-8.48 2.87-12.7 4.36-4.38 1.52-8.76 3.03-13.14 4.55z"
+                        fill="#e9e9e9" opacity="1" data-original="#000000" class=""></path>
+                </g>
+            </svg></div>
+        <section class="flex flex-col items-center" data-v-02281a80="">
+            <div data-v-02281a80="">
+                <p class="font-outfit" data-v-02281a80="">Hi i am Alan, a
+                    Developer passionate about the web.</p>
+                <hr data-v-02281a80="">
+                <p class="font-mulish" data-v-02281a80=""> Fullstack
+                    Developer/ Frontend Developer and Vue.js Certified Develper. </p>
+                <p class="font-mulish mt-6" data-v-02281a80=""> Current
+                    working at Lulu's (contractor @ BairesDev) </p>
+                <p class="font-mulish mt-10" data-v-02281a80=""> You can
+                    find me as<span class="rounded-3xl px-1 hover:bg-zinc-100"
+                        data-v-02281a80="">@schirrel</span>anywere </p>
+                <p class="mt-4 font-outfit" data-v-02281a80="">Fell free
+                    to reach me out:</p>
+                <ol class="font-mulish flex gap-4 mt-4" data-v-02281a80="">
+                    <li class="hover:bg-zinc-100 rounded-3xl border border-white p-2" data-v-02281a80=""><a
+                            href="http://github.com/schirrel" data-text="GitHub" data-v-02281a80=""> GitHub </a></li>
+                    <li class="hover:bg-zinc-100 rounded-3xl border border-white p-2" data-v-02281a80=""><a
+                            href="https://www.linkedin.com/in/alanschio/" data-text="LinkedIn"
+                            data-v-02281a80="">LinkedIn </a></li>
+                    <li class="hover:bg-zinc-100 rounded-3xl border border-white p-2" data-v-02281a80=""><a
+                            href="http://codepen.com/schirrel" data-text="CodePen" data-v-02281a80=""> CodePen </a></li>
+                    <li class="hover:bg-zinc-100 rounded-3xl border border-white p-2" data-v-02281a80=""><a
+                            href="mailto:contato@schirrel.dev" data-text="E-mail " data-v-02281a80=""> E-mail </a></li>
+                </ol>
+            </div>
+        </section>
+    </main>
 
-            <li data-prefix="2016">
-              <h6>
-                <span data-i18n="invent">Desenvolvimento Embarcado</span> {<span data-i18n="internship">Estágio</span>}
-                <br />
-                <small>Invent Robotics - BH (<span data-i18n="brazil">Brasil</span>)</small>
-              </h6>
-            </li>
-            <li data-prefix="2015">
-              <h6>
-                <span data-i18n="defiant">Desenvolvimento de Jogos</span> {<span data-i18n="internship">Estágio</span>}
-                <br />
-                <small>Defiant Games - Dublin (<span data-i18n="ireland">Irlanda</span>)</small>
-              </h6>
-            </li>
-            <li data-prefix="2015 - 2014">
-              <h6>
-                <span data-i18n="nci">BSc Computing - 3th Year</span>
-                <br />
-                <small>National College of Ireland</small>
-              </h6>
-            </li>
-            <li data-prefix="2016 - 2011">
-              <h6>
-                <span data-i18n="ufms">Graduação em Sistemas de Informação</span>
-                <br />
-                <small>UFMS</small>
-              </h6>
-            </li>
-          </ol>
-        </div>
-      </article>
-      <article id="contact">
-        <div class="content horizontal-no-padding">
-          <h1 data-i18n="contact">Contato</h1>
-          <a href="http://codepen.com/schirrel" data-text="CodePen"> CodePen </a>
-          <a href="http://github.com/schirrel" data-text="GitHub"> GitHub </a>
-          <a href="https://www.linkedin.com/in/alanschio/" data-text="LinkedIn"> LinkedIn </a>
-          <a href="mailto:contato@schirrel.dev" data-text="E-mail "> E-mail </a>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <script type="module" src="magica.js"></script>
 </body>
 
 </html>
